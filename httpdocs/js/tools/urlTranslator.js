@@ -50,6 +50,14 @@ define([], function() {
 		 */
 		toWP: function(url) {
 			return url.replace(this.getDomain(), this.getDomain() +"/content");
+		},
+
+		/**
+		 * Is the provided url on the current domain?
+		 * @return boolean
+		 */
+		urlIsSameDomain: function(url) {
+			return (url.indexOf(this.getDomain()) !== -1);
 		}
 	};
 

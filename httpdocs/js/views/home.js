@@ -5,11 +5,11 @@ define([
 	"views/featuredProducts",
 	'text!templates/home.html',
 	'tools/urlTranslator',
-	'tools/contentCache'
-	], function($, _, Backbone, featuredProductsView, homeHTML, UrlTranslator, ContentCache){
+	'tools/contentCache',
+	'tools/contentAdjuster'
+	], function($, _, Backbone, featuredProductsView, homeHTML, UrlTranslator, ContentCache, ContentAdjuster){
 		var homeView = Backbone.View.extend({
 			el: "#content",
-
 			events: {},
 
 			/**
@@ -55,8 +55,9 @@ define([
 					var _this = this;
 					$.getJSON(url, { json: 1 }, function(response) {
 						if(response && response.status && response.status === "ok") {
-							_this.loadContent(response.page.title, response.page.content);
-							ContentCache.add(url, response.page.title, response.page.content);
+							var content = ContentAdjuster.correct(response.page.content);
+							_this.loadContent(response.page.title, content);
+							ContentCache.add(url, response.page.title, content);
 						}
 					});
 				}

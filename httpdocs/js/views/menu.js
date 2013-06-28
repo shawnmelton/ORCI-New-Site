@@ -21,11 +21,13 @@ define([
 			 * Navigate to the provided link without reloading the browser.
 			 */
 			onLinkClick: function(event) {
-				event.preventDefault();
-				appRouter.navigate(UrlTranslator.getRelativeUrl($(event.currentTarget).attr("href")), {
-					trigger: true,
-					replace: true
-				});
+				if(UrlTranslator.urlIsSameDomain($(event.currentTarget).attr("href"))) {
+					event.preventDefault();
+					appRouter.navigate(UrlTranslator.getRelativeUrl($(event.currentTarget).attr("href")), {
+						trigger: true,
+						replace: true
+					});
+				}
 			},
 
 			render: function(){

@@ -298,6 +298,15 @@ html {
 						color: #36c;
 						font-size: 120%;
 					}
+
+					a {
+						color: @logoBlue;
+
+						&:hover {
+							text-decoration: none;
+							color: lighten(@logoBlue, 10%);
+						}
+					}
 				}
 
 				>#featured-products {

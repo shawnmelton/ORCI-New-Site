@@ -15,10 +15,12 @@ define([
 			},
 
 			showDefault: function() {
+				window.scrollTo(0, 0);
 				defaultView.render();
 			},
 			
 			showHome: function(){
+				window.scrollTo(0, 0);
 				homeView.render();
 			}
 		});

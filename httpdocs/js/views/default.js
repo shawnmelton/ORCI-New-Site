@@ -4,8 +4,9 @@ define([
 	"backbone",
 	'text!templates/default.html',
 	'tools/urlTranslator',
-	'tools/contentCache'
-	], function($, _, Backbone, defaultHTML, UrlTranslator, ContentCache){
+	'tools/contentCache',
+	'tools/contentAdjuster'
+	], function($, _, Backbone, defaultHTML, UrlTranslator, ContentCache, ContentAdjuster){
 		var defaultView = Backbone.View.extend({
 			el: "#content",
 
@@ -19,6 +20,25 @@ define([
 						content: content
 					}))
 					.parent().removeClass("home");
+
+				$("#content a").unbind("click");
+				var _this = this;
+				$("#content a").click(function(e) {
+					_this.onLinkClick(e, $(this));
+				});
+			},
+
+			/**
+			 * Navigate to the provided link without reloading the browser.
+			 */
+			onLinkClick: function(event, target) {
+				if(UrlTranslator.urlIsSameDomain(target.attr("href"))) {
+					event.preventDefault();
+					appRouter.navigate(UrlTranslator.getRelativeUrl(target.attr("href")), {
+						trigger: true,
+						replace: true
+					});
+				}
 			},
 
 			/**
@@ -34,8 +54,9 @@ define([
 					$.getJSON(url, { json: 1 }, function(response) {
 						if(response && response.status && response.status === "ok") {
 							var pageObj = response.post !== undefined ? response.post : response.page;
-							_this.loadContent(pageObj.title, pageObj.content);
-							ContentCache.add(url, pageObj.title, pageObj.content);
+							var content = ContentAdjuster.correct(pageObj.content);
+							_this.loadContent(pageObj.title, content);
+							ContentCache.add(url, pageObj.title, content);
 						}
 					});
 				}
