@@ -1,11 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://dev.orci.com/content/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/3.5.2" -->
 <!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.2.9" -->
-<!-- generated-on="June 28, 2013 4:21 PM" -->
+<!-- generated-on="June 28, 2013 6:36 PM" -->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
 		<loc>http://dev.orci.com/content/</loc>
-		<lastmod>2013-06-28T16:21:32+00:00</lastmod>
+		<lastmod>2013-06-28T18:34:58+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>http://dev.orci.com/content/open-roads-consulting-becomes-amag-technology-certified-under-amags-symmetry-extended-business-solutions-program/</loc>
+		<lastmod>2013-06-28T18:34:58+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://dev.orci.com/content/open-roads-consulting-successfully-launches-the-alaska-511-traveler-information-system/</loc>
+		<lastmod>2013-06-28T18:30:06+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://dev.orci.com/content/19th-annual-conference-exhibition-its-virginia-connecting-with-the-dot/</loc>
+		<lastmod>2013-06-28T18:18:51+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://dev.orci.com/content/18th-its-massachusetts-annual-meeting-and-conference/</loc>
+		<lastmod>2013-06-28T18:17:03+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>http://dev.orci.com/content/integrated-security-systems/services/protected-distribution-system-integration/</loc>
+		<lastmod>2013-06-28T17:13:16+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://dev.orci.com/content/integrated-security-systems/services/vindicator-idsacsbadging-system-design-integration/</loc>
+		<lastmod>2013-06-28T17:12:23+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://dev.orci.com/content/integrated-security-systems/services/factory-staging-and-programming/</loc>
+		<lastmod>2013-06-28T17:11:35+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://dev.orci.com/content/integrated-security-systems/services/vicads-system-design-integration/</loc>
+		<lastmod>2013-06-28T17:10:32+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://dev.orci.com/content/integrated-security-systems/products/netsafe/</loc>
+		<lastmod>2013-06-28T17:05:32+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://dev.orci.com/content/integrated-security-systems/products/custom-enclosures/</loc>
+		<lastmod>2013-06-28T17:04:16+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
 	</url>
 	<url>
 		<loc>http://dev.orci.com/content/integrated-security-systems/products/vicads/</loc>
@@ -132,12 +192,6 @@
 		<lastmod>2013-06-24T14:10:24+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
-	</url>
-	<url>
-		<loc>http://dev.orci.com/content/18th-its-massachusetts-annual-meeting-and-conference/</loc>
-		<lastmod>2013-06-20T13:12:26+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://dev.orci.com/content/about-us/</loc>

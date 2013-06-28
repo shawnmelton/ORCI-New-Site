@@ -67,7 +67,7 @@ define([
 						_this.$el
 							.html(_.template(bannersHTML, {
 								banners: response.images
-							}));-
+							}));
 
 						_this.startSlideshow();
 					}

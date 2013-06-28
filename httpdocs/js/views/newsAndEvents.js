@@ -56,7 +56,7 @@ define([
 					date_format: "M j, Y",
 					order: "ASC",
 					order_by: "date",
-					count: 3
+					count: 5
 				}, function(response) {
 					if(response && response.status && response.status === "ok") {
 						var articles = [];
