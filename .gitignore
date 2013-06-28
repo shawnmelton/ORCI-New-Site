@@ -213,3 +213,7 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+
+# Wordpress
+httpdocs/content/wp-content/uploads/*
