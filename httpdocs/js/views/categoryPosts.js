@@ -16,7 +16,7 @@ define([
 			 * @return String
 			 */
 			getUrl: function() {
-				return UrlTranslator.toWP(UrlTranslator.getDomain() +"/category/"+ this.category);
+				return UrlTranslator.toWP(UrlTranslator.getDomain() +"/category/"+ this.category +"/");
 			},
 
 			/**

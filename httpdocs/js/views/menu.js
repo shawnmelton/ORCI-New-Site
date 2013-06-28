@@ -14,7 +14,7 @@ define([
 			 * Get the api url to fetch menu items.
 			 */
 			getMenuUrl: function() {
-				return UrlTranslator.toWP(UrlTranslator.getDomain() +"/api/get_primary_menu");
+				return UrlTranslator.toWP(UrlTranslator.getDomain() +"/api/get_primary_menu/");
 			},
 
 			/**

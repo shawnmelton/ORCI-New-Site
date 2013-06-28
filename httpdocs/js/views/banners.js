@@ -21,7 +21,7 @@ define([
 			 * @return String
 			 */
 			getUrl: function() {
-				return UrlTranslator.toWP(UrlTranslator.getDomain() +"/api/get_banner_images");
+				return UrlTranslator.toWP(UrlTranslator.getDomain() +"/api/get_banner_images/");
 			},
 
 			/**
