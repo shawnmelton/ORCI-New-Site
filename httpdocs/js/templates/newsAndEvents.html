@@ -1,0 +1,11 @@
+<h3>News And Events</h3>
+<%= noResultsFound %>
+<% _.each(articles, function(article) { %>
+<article>
+	<small><%= article.date %></small>
+	<p>
+		<%= article.title %>
+		&nbsp;<a href="<%= article.url %>">&gt;&gt; More</a>
+	</p>
+</article>
+<% }); %>

@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule . index.html [L]
+
+<FilesMatch "\.(js|css|html)$">
+	Header append Vary Accept-Encoding
+</FilesMatch>

@@ -1,0 +1,9 @@
+<div id="slideshow">
+	<% _.each(banners, function(banner) { %>
+	<img src="<%= banner.src %>" alt="<%= banner.alt %>">
+	<% }); %>
+</div>
+<a id="next"></a>
+<a id="previous"></a>
+<a id="pause"></a>
+<a id="play"></a>
