@@ -218,3 +218,6 @@ pip-log.txt
 # Wordpress
 httpdocs/content/wp-content/uploads/*
 httpdocs/content/wp-config.php
+
+# SASS
+httpdocs/css/.sass-cache/*
