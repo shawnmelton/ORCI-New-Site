@@ -1,5 +1,5 @@
 require.config({
-	urlArgs: "r="+ (new Date()).getTime(),
+	// urlArgs: "r="+ (new Date()).getTime(),
 
 	paths: {
 		jquery: "libs/jquery",
