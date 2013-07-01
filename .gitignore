@@ -221,3 +221,5 @@ httpdocs/content/wp-config.php
 
 # SASS
 httpdocs/css/.sass-cache/*
+httpdocs/css/.sass-cache/*/*
+*.scssc
