@@ -1,0 +1,21 @@
+{
+  "name": "ORCI",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shawnmelton/ORCI-New-Site.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/shawnmelton/ORCI-New-Site/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1"
+  }
+}

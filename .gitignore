@@ -223,3 +223,6 @@ httpdocs/content/wp-config.php
 httpdocs/css/.sass-cache/*
 httpdocs/css/.sass-cache/*/*
 *.scssc
+
+# Grunt
+node_modules
