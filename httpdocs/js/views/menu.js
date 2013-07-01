@@ -35,6 +35,9 @@ define([
 				$.getJSON(this.getMenuUrl(), function(response) {
 					if(response && response.status && response.status === "ok") {
 						_this.$el.html(response.content);
+						_this.$el.find("ul ul ul").each(function() {
+							$(this).parent().addClass("tertiary");
+						});
 					}
 				});
 			}
