@@ -57,6 +57,8 @@ define([
 							var content = ContentAdjuster.correct(pageObj.content);
 							_this.loadContent(pageObj.title, content);
 							ContentCache.add(url, pageObj.title, content);
+						} else if(response && response.status && response.status === "error") {
+							_this.loadContent("Page Not Found", "<p>Oops!  It appears that you are attempting to view a page that does not exist.  Please double check the url you entered is correct.</p>");
 						}
 					});
 				}

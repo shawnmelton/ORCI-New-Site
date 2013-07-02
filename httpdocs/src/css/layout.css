@@ -1,0 +1,321 @@
+html {
+  font-size: 12px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #333;
+  background-attachment: fixed; }
+  html > body {
+    position: relative;
+    margin: 0; }
+    html > body > img {
+      display: block;
+      position: absolute;
+      top: 184px;
+      width: 100%;
+      z-index: -1; }
+    html > body > header {
+      height: 116px;
+      padding: 25px 25px 0;
+      overflow: hidden;
+      background: #fff;
+      background: -o-linear-gradient(white, #e3e3e3);
+      background: -ms-linear-gradient(white, #e3e3e3);
+      background: linear-gradient(white, #e3e3e3); }
+      html > body > header > div {
+        width: 1066px;
+        margin: 0 auto; }
+        html > body > header > div:after {
+          content: " ";
+          display: table;
+          clear: both; }
+        html > body > header > div > a {
+          display: block;
+          height: 116px;
+          width: 105px;
+          float: left;
+          margin-right: 25px;
+          outline: none;
+          cursor: pointer;
+          background: url(../img/logo.png); }
+          html > body > header > div > a > span {
+            display: none; }
+        html > body > header > div > h2 {
+          float: left;
+          margin: 0;
+          color: #003082;
+          margin: 0;
+          font-size: 185%;
+          line-height: 100px;
+          height: 116px; }
+    html > body > div {
+      position: relative;
+      padding-top: 43px; }
+      html > body > div > nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 37px;
+        background: url(../img/nav.png);
+        border-bottom: 4px solid #00594b;
+        padding: 2px 0 0;
+        width: 100%;
+        z-index: 1000; }
+        html > body > div > nav ul {
+          margin: 0;
+          padding: 0;
+          list-style: none; }
+        html > body > div > nav > ul {
+          width: 1066px;
+          margin: 0 auto;
+          list-style: none;
+          padding: 0; }
+          html > body > div > nav > ul:after {
+            content: " ";
+            display: table;
+            clear: both; }
+          html > body > div > nav > ul > li {
+            float: left;
+            /* Secondary Links (Drop down navigation) */ }
+            html > body > div > nav > ul > li > a {
+              display: block;
+              padding: 0 25px;
+              height: 37px;
+              line-height: 37px;
+              font-weight: bold;
+              font-size: 110%;
+              color: #fff;
+              text-decoration: none;
+              text-shadow: 0 0 1px #000;
+              cursor: pointer;
+              outline: none; }
+              html > body > div > nav > ul > li > a:hover {
+                background: #011F53; }
+            html > body > div > nav > ul > li > ul {
+              display: none;
+              position: absolute;
+              top: 39px;
+              background: url(../img/secondaryMenuBG.png) repeat 0 0;
+              border: 4px solid #00594b;
+              border-top-width: 0;
+              box-shadow: 0 0 10px #000;
+              padding: 10px 10px 5px; }
+              html > body > div > nav > ul > li > ul:after {
+                content: " ";
+                display: table;
+                clear: both; }
+              html > body > div > nav > ul > li > ul > li {
+                position: relative;
+                padding-bottom: 3px;
+                /* Tertiary Links */ }
+                html > body > div > nav > ul > li > ul > li > a {
+                  display: block;
+                  font-size: 110%;
+                  font-weight: bold;
+                  color: #cde;
+                  text-decoration: none;
+                  text-transform: uppercase;
+                  text-shadow: 0 0 1px #000;
+                  border-bottom: 3px solid #00594b;
+                  padding: 0 15px;
+                  height: 30px;
+                  line-height: 30px;
+                  background: #004b8d;
+                  background: -o-linear-gradient(#003d74, #003564);
+                  background: -ms-linear-gradient(#003d74, #003564);
+                  background: linear-gradient(#003d74, #003564); }
+                  html > body > div > nav > ul > li > ul > li > a:hover {
+                    color: #def;
+                    background: #00305a; }
+                  html > body > div > nav > ul > li > ul > li > a:active {
+                    background: #002241; }
+                html > body > div > nav > ul > li > ul > li.tertiary {
+                  padding-bottom: 5px; }
+                html > body > div > nav > ul > li > ul > li > ul {
+                  background: #555; }
+                  html > body > div > nav > ul > li > ul > li > ul > li {
+                    padding: 0 1px 1px; }
+                    html > body > div > nav > ul > li > ul > li > ul > li > a {
+                      display: block;
+                      height: 30px;
+                      line-height: 30px;
+                      text-decoration: none;
+                      color: #222;
+                      border-top-width: 0;
+                      padding: 0 15px;
+                      font-weight: bold;
+                      color: #9bc;
+                      background: #333;
+                      background: -o-linear-gradient(#333333, #222222);
+                      background: -ms-linear-gradient(#333333, #222222);
+                      background: linear-gradient(#333333, #222222); }
+                      html > body > div > nav > ul > li > ul > li > ul > li > a:hover {
+                        background: #222;
+                        color: #bde; }
+                      html > body > div > nav > ul > li > ul > li > ul > li > a:active {
+                        background: #000;
+                        color: #bbb; }
+            html > body > div > nav > ul > li:hover > ul {
+              display: block; }
+            html > body > div > nav > ul > li:hover > a {
+              background: #011F53; }
+      html > body > div > #banner {
+        width: 1061px;
+        height: 222px;
+        background: black url(../img/banner-loading.gif) no-repeat center center;
+        margin: 0 auto 5px;
+        overflow: hidden;
+        position: relative; }
+        html > body > div > #banner > a {
+          display: none;
+          height: 48px;
+          width: 48px;
+          background: url(../img/controls.png) no-repeat 0 0;
+          color: #fff;
+          font-weight: bold;
+          position: absolute;
+          z-index: 1000;
+          cursor: pointer;
+          outline: none;
+          top: 85px; }
+          html > body > div > #banner > a#previous {
+            left: 0;
+            background-position: -144px 0; }
+            html > body > div > #banner > a#previous:hover {
+              background-position: -144px -48px; }
+          html > body > div > #banner > a#next {
+            right: 0;
+            background-position: -96px 0; }
+            html > body > div > #banner > a#next:hover {
+              background-position: -96px -48px; }
+          html > body > div > #banner > a#pause, html > body > div > #banner > a#play {
+            left: 53px; }
+          html > body > div > #banner > a#pause:hover {
+            background-position: 0px -48px; }
+          html > body > div > #banner > a#play {
+            visibility: hidden;
+            background-position: -48px 0; }
+            html > body > div > #banner > a#play:hover {
+              background-position: -48px -48px; }
+        html > body > div > #banner:hover > a {
+          display: block; }
+      html > body > div > section {
+        width: 1066px;
+        margin: 0 auto; }
+        html > body > div > section:after {
+          content: " ";
+          display: table;
+          clear: both; }
+        html > body > div > section > #content {
+          position: relative;
+          overflow: hidden;
+          padding: 25px 25px 35px;
+          width: 765px;
+          min-height: 290px;
+          background: white url(../img/contentBottomBG.png) repeat-x bottom left;
+          /* News, Archives, etc. */ }
+          html > body > div > section > #content > #loading {
+            display: block;
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            left: 50%;
+            top: 50%;
+            margin-left: -32px;
+            margin-top: -32px; }
+          html > body > div > section > #content h1 {
+            margin: 0;
+            margin-bottom: 10px;
+            color: #0b3d6f;
+            font-size: 155%;
+            font-weight: normal; }
+          html > body > div > section > #content h3 {
+            margin: 0 0 5px;
+            color: #36c;
+            font-size: 120%; }
+          html > body > div > section > #content a {
+            color: #004b8d; }
+            html > body > div > section > #content a:hover {
+              text-decoration: none;
+              color: #0066c0; }
+          html > body > div > section > #content #category-posts > article {
+            padding: 20px 0;
+            margin: 0 5px;
+            border-top: 1px dashed #aaa; }
+          html > body > div > section > #content #category-posts > article:first-child {
+            border-top-width: 0; }
+        html > body > div > section > #featured-products {
+          display: none;
+          float: left;
+          width: 248px; }
+          html > body > div > section > #featured-products > p {
+            position: relative;
+            margin: 0;
+            width: 248px;
+            height: 172px;
+            background: url(../img/featuredProducts.png) no-repeat 0 -172px; }
+            html > body > div > section > #featured-products > p:first-child {
+              margin-bottom: 5px;
+              background-position: 0 0; }
+            html > body > div > section > #featured-products > p > span {
+              display: none; }
+            html > body > div > section > #featured-products > p > a {
+              display: block;
+              height: 23px;
+              width: 94px;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              cursor: pointer;
+              outline: none; }
+        html > body > div > section.home > #content {
+          width: 512px;
+          margin-right: 5px;
+          float: left; }
+          html > body > div > section.home > #content h1 {
+            display: none; }
+        html > body > div > section.home > #featured-products {
+          display: block; }
+        html > body > div > section > #news-and-events {
+          padding: 15px 10px;
+          width: 224px;
+          min-height: 320px;
+          background: #003082 url(../img/news-loading.gif) no-repeat center center;
+          color: #fff;
+          float: right; }
+          html > body > div > section > #news-and-events > h3 {
+            margin: 0 0 5px;
+            padding-bottom: 3px;
+            text-transform: uppercase;
+            font-size: 125%;
+            border-bottom: 2px solid #90A3CB; }
+          html > body > div > section > #news-and-events > article {
+            margin-bottom: 15px; }
+            html > body > div > section > #news-and-events > article > small {
+              display: block;
+              margin-bottom: 5px;
+              font-size: 90%; }
+            html > body > div > section > #news-and-events > article > p {
+              margin: 0; }
+              html > body > div > section > #news-and-events > article > p > a {
+                color: #28a040;
+                text-decoration: none;
+                cursor: pointer;
+                text-decoration: none; }
+                html > body > div > section > #news-and-events > article > p > a:hover {
+                  text-decoration: underline; }
+                html > body > div > section > #news-and-events > article > p > a:active {
+                  color: #59d572; }
+    html > body > footer {
+      width: 1066px;
+      margin: 0 auto;
+      height: 35px;
+      line-height: 35px;
+      color: #aaa;
+      font-size: 90%; }
+      html > body > footer:after {
+        content: " ";
+        display: table;
+        clear: both; }
+      html > body > footer > p {
+        margin: 0 10px; }
+      html > body > footer > p#office-phone {
+        float: right; }

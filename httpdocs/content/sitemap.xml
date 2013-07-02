@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://dev.orci.com/content/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/3.5.2" -->
 <!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.2.9" -->
-<!-- generated-on="June 28, 2013 6:36 PM" -->
+<!-- generated-on="July 2, 2013 2:54 PM" -->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
 		<loc>http://dev.orci.com/content/</loc>
 		<lastmod>2013-06-28T18:34:58+00:00</lastmod>
@@ -29,7 +29,7 @@
 		<loc>http://dev.orci.com/content/18th-its-massachusetts-annual-meeting-and-conference/</loc>
 		<lastmod>2013-06-28T18:17:03+00:00</lastmod>
 		<changefreq>monthly</changefreq>
-		<priority>1.0</priority>
+		<priority>0.2</priority>
 	</url>
 	<url>
 		<loc>http://dev.orci.com/content/integrated-security-systems/services/protected-distribution-system-integration/</loc>

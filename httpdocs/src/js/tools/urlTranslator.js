@@ -49,6 +49,10 @@ define([], function() {
 		 * Translate a site url to a url that Wordpress will recognize.
 		 */
 		toWP: function(url) {
+			if(url.indexOf(this.getDomain() +"/#") !== -1) {
+				url = url.replace(this.getDomain() +"/#", this.getDomain() +"/");
+			}
+
 			return url.replace(this.getDomain(), this.getDomain() +"/content");
 		},
 
