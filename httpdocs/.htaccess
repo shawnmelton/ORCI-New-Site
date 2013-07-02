@@ -45,4 +45,7 @@ RewriteRule . index.html [L]
   <filesMatch "\.(x?html?|php)$">
     Header set Cache-Control "private, must-revalidate"
   </filesMatch>
+  <FilesMatch "\.(css|gif|ico|jpg|jpeg|js|pdf|png)$">
+   	Header set Last-Modified "Mon, 31 Aug 2009 00:00:00 GMT"
+  </FilesMatch>
 </ifModule>

@@ -10,3 +10,48 @@ RewriteRule . /content/index.php [L]
 </IfModule>
 
 # END WordPress
+
+# Adding default character set.
+<FilesMatch "\.(htm|html|css|js|php)$">
+	AddDefaultCharset UTF-8
+	DefaultLanguage en-US
+	Header append Vary Accept-Encoding
+</FilesMatch>
+
+# Compressing output
+<ifModule mod_deflate.c>
+	SetOutputFilter DEFLATE 
+	SetEnvIfNoCase Request_URI \.(?:gif|jpg|png|ico|zip|gz)$ no-gzip 
+</ifModule>
+
+# Expiration dates to served items.
+<ifModule mod_expires.c>
+	ExpiresActive On
+	ExpiresDefault "access plus 604800 seconds"
+	ExpiresByType image/x-icon "access plus 2592000 seconds"
+	ExpiresByType image/jpeg "access plus 2592000 seconds"
+	ExpiresByType image/png "access plus 2592000 seconds"
+	ExpiresByType image/gif "access plus 2592000 seconds"
+	ExpiresByType text/css "access plus 604800 seconds"
+	ExpiresByType text/javascript "access plus 604800 seconds"
+	ExpiresByType application/javascript "access plus 604800 seconds"
+	ExpiresByType application/x-javascript "access plus 604800 seconds"
+	ExpiresByType text/html "access plus 600 seconds"
+	ExpiresByType application/xhtml+xml "access plus 600 seconds"
+</ifModule>
+
+# Cache control settings
+<ifModule mod_headers.c>
+  <filesMatch "\.(ico|jpe?g|png|gif|swf|css)$">
+    Header set Cache-Control "public"
+  </filesMatch>
+  <filesMatch "\.(js)$">
+    Header set Cache-Control "private"
+  </filesMatch>
+  <filesMatch "\.(x?html?|php)$">
+    Header set Cache-Control "private, must-revalidate"
+  </filesMatch>
+  <FilesMatch "\.(bmp|css|flv|gif|ico|jpg|jpeg|js|pdf|png|svg|swf|tif|tiff|php)$">
+   	Header set Last-Modified "Mon, 31 Aug 2009 00:00:00 GMT"
+  </FilesMatch>
+</ifModule>

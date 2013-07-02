@@ -19,7 +19,6 @@
     "grunt": "~0.4.1",
     "grunt-contrib-requirejs": "~0.4.1",
     "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-mincss": "~0.3.2",
     "grunt-contrib-cssmin": "~0.6.1",
     "grunt-contrib-imagemin": "~0.1.4",
     "grunt-contrib-jshint": "~0.6.0"
