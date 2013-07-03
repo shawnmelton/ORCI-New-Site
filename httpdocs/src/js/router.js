@@ -6,9 +6,8 @@ define([
 	'views/default',
 	'views/categoryPosts',
 	'views/menu',
-	'views/banners',
 	'views/newsAndEvents'
-	], function($, _, Backbone, homeView, defaultView, categoryView, mainMenu, banners, newsAndEvents){
+	], function($, _, Backbone, homeView, defaultView, categoryView, mainMenu, newsAndEvents){
 		var AppRouter = Backbone.Router.extend({
 			initialize: function() {
 				this.route(/^.*/, 'showDefault');
@@ -60,7 +59,6 @@ define([
 
 			mainMenu.render();
 			newsAndEvents.render();
-			banners.render();			
 		};
 		
 		return {

@@ -1,0 +1,328 @@
+/**
+ *  Width: Minimum of 1066 pixels
+ *  Description: This is styling that will only be applied when we have the necessary width to show the full website.
+ */
+@media (min-width: 1066px) {
+  html > body > img {
+    display: block;
+    position: absolute;
+    top: 184px;
+    width: 100%;
+    z-index: -1; }
+  html > body > header > div {
+    width: 1066px;
+    margin: 0 auto !important; }
+  html > body > div > nav > ul {
+    width: 1066px;
+    margin: 0 auto !important; }
+  html > body > div > #banner {
+    width: 1061px;
+    height: 222px;
+    background: black url(../img/banner-loading.gif) no-repeat center center;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative; }
+    html > body > div > #banner > a {
+      display: none;
+      height: 48px;
+      width: 48px;
+      background: url(../img/controls.png) no-repeat 0 0;
+      color: #fff;
+      font-weight: bold;
+      position: absolute;
+      z-index: 1000;
+      cursor: pointer;
+      outline: none;
+      top: 85px; }
+      html > body > div > #banner > a#previous {
+        left: 0;
+        background-position: -144px 0; }
+        html > body > div > #banner > a#previous:hover {
+          background-position: -144px -48px; }
+      html > body > div > #banner > a#next {
+        right: 0;
+        background-position: -96px 0; }
+        html > body > div > #banner > a#next:hover {
+          background-position: -96px -48px; }
+      html > body > div > #banner > a#pause, html > body > div > #banner > a#play {
+        left: 53px; }
+      html > body > div > #banner > a#pause:hover {
+        background-position: 0px -48px; }
+      html > body > div > #banner > a#play {
+        visibility: hidden;
+        background-position: -48px 0; }
+        html > body > div > #banner > a#play:hover {
+          background-position: -48px -48px; }
+    html > body > div > #banner:hover > a {
+      display: block; }
+  html > body > div > section {
+    width: 1066px;
+    margin: 0 auto !important; }
+    html > body > div > section > #content {
+      width: 765px; }
+    html > body > div > section > #featured-products {
+      margin-left: 5px;
+      float: left;
+      width: 248px; }
+    html > body > div > section.home > #content {
+      width: 512px;
+      float: left; }
+  html > body > footer {
+    width: 1066px;
+    margin: 0 auto !important; } }
+/**
+ *  Width: Maximum of 1065 pixels
+ *  Description: Styling for site when it doesn't have the width required to display full site.
+ */
+@media (max-width: 1065px) {
+  html > body > img {
+    display: none; }
+  html > body > div > #banner {
+    display: none; }
+  html > body > div > section > #featured-products {
+    padding-top: 5px; }
+    html > body > div > section > #featured-products > p {
+      float: left;
+      margin-right: 5px; }
+    html > body > div > section > #featured-products:after {
+      content: " ";
+      display: table;
+      clear: both; } }
+/**
+ *  Width: Minimum of 890 pixels
+ *  Description: Full menu requires at least 890 pixels.  This will contain styles for hover based menu.
+ *  Also, this is the first resolution that we are able to show the News and Events.
+ */
+@media (min-width: 890px) {
+  html > body > header > div > a {
+    float: left;
+    margin-right: 25px; }
+  html > body > div {
+    position: relative;
+    padding-top: 43px; }
+    html > body > div > nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 37px;
+      background: url(../img/nav.png);
+      border-bottom: 4px solid #00594b;
+      padding: 2px 0 0;
+      width: 100%;
+      z-index: 1000; }
+      html > body > div > nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none; }
+      html > body > div > nav > ul {
+        list-style: none;
+        padding: 0; }
+        html > body > div > nav > ul:after {
+          content: " ";
+          display: table;
+          clear: both; }
+        html > body > div > nav > ul > li {
+          float: left;
+          /* Secondary Links (Drop down navigation) */ }
+          html > body > div > nav > ul > li > a {
+            display: block;
+            padding: 0 25px;
+            height: 37px;
+            line-height: 37px;
+            font-weight: bold;
+            font-size: 110%;
+            color: #fff;
+            text-decoration: none;
+            text-shadow: 0 0 1px #000;
+            cursor: pointer;
+            outline: none; }
+            html > body > div > nav > ul > li > a:hover {
+              background: #011F53; }
+          html > body > div > nav > ul > li > ul {
+            display: none;
+            position: absolute;
+            top: 39px;
+            background: url(../img/secondaryMenuBG.png) repeat 0 0;
+            border: 4px solid #00594b;
+            border-top-width: 0;
+            box-shadow: 0 0 10px #000;
+            padding: 10px 10px 5px; }
+            html > body > div > nav > ul > li > ul:after {
+              content: " ";
+              display: table;
+              clear: both; }
+            html > body > div > nav > ul > li > ul > li {
+              position: relative;
+              padding-bottom: 3px;
+              /* Tertiary Links */ }
+              html > body > div > nav > ul > li > ul > li > a {
+                display: block;
+                font-size: 110%;
+                font-weight: bold;
+                color: #cde;
+                text-decoration: none;
+                text-transform: uppercase;
+                text-shadow: 0 0 1px #000;
+                border-bottom: 3px solid #00594b;
+                padding: 0 15px;
+                height: 30px;
+                line-height: 30px;
+                background: #004b8d;
+                background: -o-linear-gradient(#003d74, #003564);
+                background: -ms-linear-gradient(#003d74, #003564);
+                background: linear-gradient(#003d74, #003564); }
+                html > body > div > nav > ul > li > ul > li > a:hover {
+                  color: #def;
+                  background: #00305a; }
+                html > body > div > nav > ul > li > ul > li > a:active {
+                  background: #002241; }
+              html > body > div > nav > ul > li > ul > li.tertiary {
+                padding-bottom: 5px; }
+              html > body > div > nav > ul > li > ul > li > ul {
+                background: #555; }
+                html > body > div > nav > ul > li > ul > li > ul > li {
+                  padding: 0 1px 1px; }
+                  html > body > div > nav > ul > li > ul > li > ul > li > a {
+                    display: block;
+                    height: 30px;
+                    line-height: 30px;
+                    text-decoration: none;
+                    color: #222;
+                    border-top-width: 0;
+                    padding: 0 15px;
+                    font-weight: bold;
+                    color: #cde;
+                    background: #333; }
+                    html > body > div > nav > ul > li > ul > li > ul > li > a:hover {
+                      background: #222;
+                      color: #bde; }
+                    html > body > div > nav > ul > li > ul > li > ul > li > a:active {
+                      background: #000;
+                      color: #bbb; }
+          html > body > div > nav > ul > li:hover > ul {
+            display: block; }
+          html > body > div > nav > ul > li:hover > a {
+            background: #011F53; }
+    html > body > div > section {
+      padding: 5px; }
+      html > body > div > section > #news-and-events {
+        padding: 15px 10px;
+        width: 224px;
+        min-height: 320px;
+        background: #003082 url(../img/news-loading.gif) no-repeat center center;
+        color: #fff;
+        float: right;
+        margin-left: 5px; }
+        html > body > div > section > #news-and-events > h3 {
+          margin: 0 0 5px;
+          padding-bottom: 3px;
+          text-transform: uppercase;
+          font-size: 125%;
+          border-bottom: 2px solid #90A3CB; }
+        html > body > div > section > #news-and-events > article {
+          margin-bottom: 15px; }
+          html > body > div > section > #news-and-events > article > small {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 90%; }
+          html > body > div > section > #news-and-events > article > p {
+            margin: 0; }
+            html > body > div > section > #news-and-events > article > p > a {
+              color: #28a040;
+              text-decoration: none;
+              cursor: pointer;
+              text-decoration: none; }
+              html > body > div > section > #news-and-events > article > p > a:hover {
+                text-decoration: underline; }
+              html > body > div > section > #news-and-events > article > p > a:active {
+                color: #59d572; }
+      html > body > div > section > #content {
+        min-height: 290px;
+        background-image: url(../img/contentBottomBG.png);
+        background-repeat: repeat-x;
+        background-position: bottom left; }
+  html > body > footer {
+    height: 35px;
+    line-height: 35px; }
+    html > body > footer:after {
+      content: " ";
+      display: table;
+      clear: both; }
+    html > body > footer > p {
+      margin: 0 10px; }
+    html > body > footer > p#office-phone {
+      float: right; }
+  html > body > #mobile-menu,
+  html > body > #mobile-menu-button {
+    display: none !important; } }
+/**
+ *  Width: Maximum of 889 pixels
+ *  Description: Display a mobile-friendly menu 
+ */
+@media (max-width: 889px) {
+  html > body > header {
+    background: #004b8d; }
+    html > body > header > div > h2 {
+      display: none; }
+  html > body nav {
+    position: relative;
+    padding: 15px; }
+    html > body nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+    html > body nav a {
+      display: block;
+      font-weight: bold;
+      text-decoration: none;
+      min-height: 40px;
+      line-height: 40px;
+      border-bottom: 1px solid #777;
+      padding-left: 12px; }
+      html > body nav a:hover {
+        background: #222; }
+    html > body nav > ul > li > a {
+      font-size: 130%;
+      color: #fff; }
+    html > body nav > ul > li > ul > li > a {
+      font-size: 115%;
+      color: #ccc; }
+    html > body nav > ul > li > ul > li > ul > li > a {
+      font-size: 100%;
+      color: #999; }
+  html > body > div > section > #news-and-events {
+    display: none; }
+  html > body > div > section > #featured-products {
+    background: #fff;
+    padding: 0 15px 25px; }
+    html > body > div > section > #featured-products > p {
+      margin-right: 0; }
+      html > body > div > section > #featured-products > p:first-child {
+        margin-right: 15px; }
+  html > body > #mobile-menu-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 60px;
+    width: 60px;
+    background: #00437e url(../img/mobileMenuButtonBG.png) no-repeat 0 0;
+    border: 1px solid #003b6e;
+    cursor: pointer;
+    outline: none; }
+  html > body > #mobile-menu-button.showing {
+    background-color: #00305a;
+    background-position: 0 -60px; }
+  html > body > nav#mobile-menu {
+    display: none;
+    position: absolute;
+    top: 141px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../img/mobileMenuBG.png) repeat 0 0; }
+    html > body > nav#mobile-menu a:hover {
+      background: #000; }
+  html > body > footer {
+    padding: 10px 15px;
+    line-height: 20px;
+    text-align: center; } }

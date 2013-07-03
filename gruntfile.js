@@ -19,16 +19,15 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				files: {
-					"httpdocs/src/css/layout.css": [
-						"httpdocs/src/css/layout.scss"
-					]
+					"httpdocs/src/css/layout.css": ["httpdocs/src/css/layout.scss"],
+					"httpdocs/src/css/responsive.css": ["httpdocs/src/css/responsive.scss"],
 				}
 			}
 		},
 		cssmin: {
 			compress: {
 				files: {
-					'httpdocs/dist/css/styles.css': ['httpdocs/src/css/wp-styles.css', 'httpdocs/src/css/layout.css']
+					'httpdocs/dist/css/styles.css': "httpdocs/src/css/*.css"
 				}
 			}
 		},
@@ -45,9 +44,20 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
+		htmlmin: {
+			dist: {
+				options: {
+					removeComments: true,
+					collapseWhitespace: true
+				},
+				files: { 
+					'httpdocs/index.html' : 'httpdocs/src/index.html'
+				}
+			}
+		},
 		watch: {
 			css: {
-				files: ['httpdocs/src/css/layout.scss', 'httpdocs/src/css/wp-styles.css'],
+				files: ['httpdocs/src/css/layout.scss', 'httpdocs/src/css/all-wp-styles.css', 'httpdocs/src/css/responsive.scss'],
 				tasks: ['sass', 'cssmin'],
 				options: {
 					livereload: true
@@ -66,6 +76,13 @@ module.exports = function(grunt) {
 				options: {
 					livereload: true
 				}
+			},
+			html: {
+				files: ['httpdocs/src/index.html'],
+				tasks: ['htmlmin'],
+				options: {
+					livereload: true
+				}
 			}
 		}
 	});
@@ -79,6 +96,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-contrib-sass");
 	grunt.loadNpmTasks("grunt-contrib-cssmin");
 	grunt.loadNpmTasks("grunt-contrib-imagemin");
+	grunt.loadNpmTasks("grunt-contrib-htmlmin");
 	grunt.loadNpmTasks("grunt-contrib-watch");
-	grunt.registerTask('default', ['jshint', 'requirejs', 'sass', 'cssmin', 'imagemin', 'watch']);
+	grunt.registerTask('default', ['jshint', 'requirejs', 'sass', 'cssmin', 'imagemin', 'htmlmin', 'watch']);
 };
