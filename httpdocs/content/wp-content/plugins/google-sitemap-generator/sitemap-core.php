@@ -281,11 +281,12 @@ class GoogleSitemapGeneratorPage {
 
 	/**
 	 * Sets the URL of the page
+	 * Note: Removing /content so that links point to site, not just CMS (Wordpress)
 	 *
 	 * @param string $url The new URL
 	 */
 	function SetUrl($url) {
-		$this->_url=(string) $url;
+		$this->_url=(string) str_replace('/content', '', $url);
 	}
 
 	/**

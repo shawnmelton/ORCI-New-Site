@@ -1,230 +1,236 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://dev.orci.com/content/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/3.5.2" -->
 <!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.2.9" -->
-<!-- generated-on="July 3, 2013 7:39 PM" -->
+<!-- generated-on="July 3, 2013 8:14 PM" -->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
-		<loc>http://dev.orci.com/content/</loc>
-		<lastmod>2013-07-03T19:39:00+00:00</lastmod>
+		<loc>http://dev.orci.com/</loc>
+		<lastmod>2013-07-03T20:14:28+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/home/</loc>
+		<loc>http://dev.orci.com/test/</loc>
+		<lastmod>2013-07-03T20:14:28+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://dev.orci.com/home/</loc>
 		<lastmod>2013-07-03T19:39:00+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/privacy-policy/</loc>
+		<loc>http://dev.orci.com/privacy-policy/</loc>
 		<lastmod>2013-07-03T18:47:23+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/disclaimer/</loc>
+		<loc>http://dev.orci.com/disclaimer/</loc>
 		<lastmod>2013-07-03T18:47:00+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/terms-of-use/</loc>
+		<loc>http://dev.orci.com/terms-of-use/</loc>
 		<lastmod>2013-07-03T18:46:47+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/19th-annual-conference-exhibition-its-virginia-connecting-with-the-dot/</loc>
+		<loc>http://dev.orci.com/19th-annual-conference-exhibition-its-virginia-connecting-with-the-dot/</loc>
 		<lastmod>2013-07-03T18:40:52+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/open-roads-consulting-becomes-amag-technology-certified-under-amags-symmetry-extended-business-solutions-program/</loc>
+		<loc>http://dev.orci.com/open-roads-consulting-becomes-amag-technology-certified-under-amags-symmetry-extended-business-solutions-program/</loc>
 		<lastmod>2013-06-28T18:34:58+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/open-roads-consulting-successfully-launches-the-alaska-511-traveler-information-system/</loc>
+		<loc>http://dev.orci.com/open-roads-consulting-successfully-launches-the-alaska-511-traveler-information-system/</loc>
 		<lastmod>2013-06-28T18:30:06+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/18th-its-massachusetts-annual-meeting-and-conference/</loc>
+		<loc>http://dev.orci.com/18th-its-massachusetts-annual-meeting-and-conference/</loc>
 		<lastmod>2013-06-28T18:17:03+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/integrated-security-systems/services/protected-distribution-system-integration/</loc>
+		<loc>http://dev.orci.com/integrated-security-systems/services/protected-distribution-system-integration/</loc>
 		<lastmod>2013-06-28T17:13:16+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/integrated-security-systems/services/vindicator-idsacsbadging-system-design-integration/</loc>
+		<loc>http://dev.orci.com/integrated-security-systems/services/vindicator-idsacsbadging-system-design-integration/</loc>
 		<lastmod>2013-06-28T17:12:23+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/integrated-security-systems/services/factory-staging-and-programming/</loc>
+		<loc>http://dev.orci.com/integrated-security-systems/services/factory-staging-and-programming/</loc>
 		<lastmod>2013-06-28T17:11:35+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/integrated-security-systems/services/vicads-system-design-integration/</loc>
+		<loc>http://dev.orci.com/integrated-security-systems/services/vicads-system-design-integration/</loc>
 		<lastmod>2013-06-28T17:10:32+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/integrated-security-systems/products/netsafe/</loc>
+		<loc>http://dev.orci.com/integrated-security-systems/products/netsafe/</loc>
 		<lastmod>2013-06-28T17:05:32+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/integrated-security-systems/products/custom-enclosures/</loc>
+		<loc>http://dev.orci.com/integrated-security-systems/products/custom-enclosures/</loc>
 		<lastmod>2013-06-28T17:04:16+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/integrated-security-systems/products/vicads/</loc>
+		<loc>http://dev.orci.com/integrated-security-systems/products/vicads/</loc>
 		<lastmod>2013-06-28T16:21:32+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/integrated-security-systems/services/</loc>
+		<loc>http://dev.orci.com/integrated-security-systems/services/</loc>
 		<lastmod>2013-06-28T16:14:03+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/integrated-security-systems/products/</loc>
+		<loc>http://dev.orci.com/integrated-security-systems/products/</loc>
 		<lastmod>2013-06-28T16:13:47+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/integrated-security-systems/partners/</loc>
+		<loc>http://dev.orci.com/integrated-security-systems/partners/</loc>
 		<lastmod>2013-06-28T16:13:26+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/integrated-security-systems/events/</loc>
+		<loc>http://dev.orci.com/integrated-security-systems/events/</loc>
 		<lastmod>2013-06-28T16:13:18+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/integrated-security-systems/</loc>
+		<loc>http://dev.orci.com/integrated-security-systems/</loc>
 		<lastmod>2013-06-28T16:01:29+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/contact-us/locations/</loc>
+		<loc>http://dev.orci.com/contact-us/locations/</loc>
 		<lastmod>2013-06-28T15:30:48+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/contact-us/career-opportunities/mid-level-java-engineer/</loc>
+		<loc>http://dev.orci.com/contact-us/career-opportunities/mid-level-java-engineer/</loc>
 		<lastmod>2013-06-28T14:57:32+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/contact-us/career-opportunities/</loc>
+		<loc>http://dev.orci.com/contact-us/career-opportunities/</loc>
 		<lastmod>2013-06-28T14:54:45+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/contact-us/career-opportunities/system-engineer/</loc>
+		<loc>http://dev.orci.com/contact-us/career-opportunities/system-engineer/</loc>
 		<lastmod>2013-06-28T14:52:12+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/contact-us/career-opportunities/senior-java-software-engineer/</loc>
+		<loc>http://dev.orci.com/contact-us/career-opportunities/senior-java-software-engineer/</loc>
 		<lastmod>2013-06-28T14:50:20+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/contact-us/career-opportunities/oracle-dba/</loc>
+		<loc>http://dev.orci.com/contact-us/career-opportunities/oracle-dba/</loc>
 		<lastmod>2013-06-28T14:49:41+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/contact-us/</loc>
+		<loc>http://dev.orci.com/contact-us/</loc>
 		<lastmod>2013-06-28T14:16:44+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/about-us/current-project-locations/</loc>
+		<loc>http://dev.orci.com/about-us/current-project-locations/</loc>
 		<lastmod>2013-06-28T14:03:18+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/about-us/leadership-team/</loc>
+		<loc>http://dev.orci.com/about-us/leadership-team/</loc>
 		<lastmod>2013-06-28T13:56:17+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/intelligent-transportation-systems/products/opentms/</loc>
+		<loc>http://dev.orci.com/intelligent-transportation-systems/products/opentms/</loc>
 		<lastmod>2013-06-24T14:45:06+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/intelligent-transportation-systems/products/data-gateway/</loc>
+		<loc>http://dev.orci.com/intelligent-transportation-systems/products/data-gateway/</loc>
 		<lastmod>2013-06-24T14:44:13+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/intelligent-transportation-systems/products/lcams/</loc>
+		<loc>http://dev.orci.com/intelligent-transportation-systems/products/lcams/</loc>
 		<lastmod>2013-06-24T14:43:38+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/intelligent-transportation-systems/products/opencrs/</loc>
+		<loc>http://dev.orci.com/intelligent-transportation-systems/products/opencrs/</loc>
 		<lastmod>2013-06-24T14:42:10+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/intelligent-transportation-systems/projects/</loc>
+		<loc>http://dev.orci.com/intelligent-transportation-systems/projects/</loc>
 		<lastmod>2013-06-24T14:39:08+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/intelligent-transportation-systems/products/</loc>
+		<loc>http://dev.orci.com/intelligent-transportation-systems/products/</loc>
 		<lastmod>2013-06-24T14:10:24+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/about-us/</loc>
+		<loc>http://dev.orci.com/about-us/</loc>
 		<lastmod>2013-06-19T20:36:06+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://dev.orci.com/content/intelligent-transportation-systems/</loc>
+		<loc>http://dev.orci.com/intelligent-transportation-systems/</loc>
 		<lastmod>2013-06-19T20:33:27+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
