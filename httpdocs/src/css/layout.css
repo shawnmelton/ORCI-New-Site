@@ -7,34 +7,18 @@ html {
     position: relative;
     margin: 0; }
     html > body > header {
-      height: 114px;
       padding: 12px 25px 15px;
       overflow: hidden;
       background: #fff;
       background: -o-linear-gradient(white, #e3e3e3);
       background: -ms-linear-gradient(white, #e3e3e3);
       background: linear-gradient(white, #e3e3e3); }
-      html > body > header > div:after {
-        content: " ";
-        display: table;
-        clear: both; }
       html > body > header > div > a {
         display: block;
-        height: 114px;
-        width: 101px;
         outline: none;
-        cursor: pointer;
-        background: url(../img/logo.png); }
+        cursor: pointer; }
         html > body > header > div > a > span {
           display: none; }
-      html > body > header > div > h2 {
-        float: left;
-        margin: 0;
-        color: #003082;
-        margin: 0;
-        font-size: 185%;
-        line-height: 100px;
-        height: 116px; }
     html > body > div > section:after {
       content: " ";
       display: table;
@@ -102,7 +86,14 @@ html {
     html > body > div > section.home > #featured-products {
       display: block; }
     html > body > footer {
-      color: #aaa;
+      color: #888;
       font-size: 90%; }
       html > body > footer > p {
         margin: 0; }
+        html > body > footer > p > a {
+          color: #aaa;
+          text-decoration: none;
+          outline: none;
+          cursor: pointer; }
+          html > body > footer > p > a:hover {
+            text-decoration: underline; }

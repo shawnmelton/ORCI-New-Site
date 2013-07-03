@@ -1,11 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://dev.orci.com/content/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/3.5.2" -->
 <!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.2.9" -->
-<!-- generated-on="July 3, 2013 2:37 PM" -->
+<!-- generated-on="July 3, 2013 7:39 PM" -->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
 		<loc>http://dev.orci.com/content/</loc>
-		<lastmod>2013-06-28T18:34:58+00:00</lastmod>
+		<lastmod>2013-07-03T19:39:00+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>http://dev.orci.com/content/home/</loc>
+		<lastmod>2013-07-03T19:39:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://dev.orci.com/content/privacy-policy/</loc>
+		<lastmod>2013-07-03T18:47:23+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://dev.orci.com/content/disclaimer/</loc>
+		<lastmod>2013-07-03T18:47:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://dev.orci.com/content/terms-of-use/</loc>
+		<lastmod>2013-07-03T18:46:47+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://dev.orci.com/content/19th-annual-conference-exhibition-its-virginia-connecting-with-the-dot/</loc>
+		<lastmod>2013-07-03T18:40:52+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
 	</url>
 	<url>
 		<loc>http://dev.orci.com/content/open-roads-consulting-becomes-amag-technology-certified-under-amags-symmetry-extended-business-solutions-program/</loc>
@@ -16,12 +46,6 @@
 	<url>
 		<loc>http://dev.orci.com/content/open-roads-consulting-successfully-launches-the-alaska-511-traveler-information-system/</loc>
 		<lastmod>2013-06-28T18:30:06+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-	<url>
-		<loc>http://dev.orci.com/content/19th-annual-conference-exhibition-its-virginia-connecting-with-the-dot/</loc>
-		<lastmod>2013-06-28T18:18:51+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
@@ -202,12 +226,6 @@
 	<url>
 		<loc>http://dev.orci.com/content/intelligent-transportation-systems/</loc>
 		<lastmod>2013-06-19T20:33:27+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.6</priority>
-	</url>
-	<url>
-		<loc>http://dev.orci.com/content/home/</loc>
-		<lastmod>2013-06-19T14:35:22+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>

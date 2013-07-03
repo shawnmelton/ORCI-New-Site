@@ -1,17 +1,17 @@
-define(['jquery', 'views/banners', 'tools/mobileMenu'], function($, banners, MobileMenu) {
+define(['jquery', 'views/banners', 'tools/mobileMenu', 'views/newsAndEvents'], function($, banners, MobileMenu, newsAndEvents) {
 	var ResponsiveLayout = function() {};
 	ResponsiveLayout.prototype = {
 		width: 0,
 		origWidth: 0,
 		fullSizeLoaded: false,
 		mobileSizeLoaded: false,
+		nonMobileSizeLoaded: false,
 
 		/**
 		 * Determine the new size of the layout.
 		 */
 		determine: function() {
 			this.width = $(window).width();
-			// console.log(this.width);
 		},
 
 		/**
@@ -50,6 +50,17 @@ define(['jquery', 'views/banners', 'tools/mobileMenu'], function($, banners, Mob
 		},
 
 		/**
+		 * If this document is presented to a non-mobile device, perform the following changes.
+		 * Due to the provided designs, we are switching early to a mobile layout.  <= 889 pixels
+		 */
+		performNonMobileChanges: function() {
+			if(this.nonMobileSizeLoaded === false && this.width >= 890 && (this.origWidth == 0 || this.origWidth < 890)) {
+				this.nonMobileSizeLoaded = true;
+				newsAndEvents.render();
+			}
+		},
+
+		/**
 		 * Determine the layout changes and perform necessary layout adjustments.
 		 */
 		refresh: function() {
@@ -57,6 +68,7 @@ define(['jquery', 'views/banners', 'tools/mobileMenu'], function($, banners, Mob
 
 			this.performFullSizeChanges();
 			this.performMobileChanges();
+			this.performNonMobileChanges();
 
 			this.origWidth = this.width;
 		}

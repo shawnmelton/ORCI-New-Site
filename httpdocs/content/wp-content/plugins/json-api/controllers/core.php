@@ -64,6 +64,7 @@ class JSON_API_Core_Controller {
     if ($post) {
       $previous = get_adjacent_post(false, '', true);
       $next = get_adjacent_post(false, '', false);
+
       $response = array(
         'post' => new JSON_API_Post($post)
       );
@@ -73,6 +74,13 @@ class JSON_API_Core_Controller {
       if ($next) {
         $response['next_url'] = get_permalink($next->ID);
       }
+
+      /**
+       * Meta tags integration
+       */
+      $response['meta_description'] = get_post_meta($posts[0]->id, '_amt_description', true);
+      $response['meta_keywords'] = get_post_meta($posts[0]->id, '_amt_keywords', true);
+
       return $response;
     } else {
       $json_api->error("Not found.");
@@ -86,6 +94,7 @@ class JSON_API_Core_Controller {
       if (!$id) {
         $id = $page_id;
       }
+
       $posts = $json_api->introspector->get_posts(array(
         'page_id' => $id
       ));
@@ -96,6 +105,14 @@ class JSON_API_Core_Controller {
       $posts = $json_api->introspector->get_posts(array(
         'pagename' => $slug
       ));
+
+      /**
+       * Meta tags integration
+       */
+      foreach($posts as $post) {
+         $post->meta_description = get_post_meta($posts[0]->id, '_amt_description', true);
+         $post->meta_keywords = get_post_meta($posts[0]->id, '_amt_keywords', true); 
+      }
     } else {
       $json_api->error("Include 'id' or 'slug' var in your request.");
     }

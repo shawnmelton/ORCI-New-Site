@@ -94,9 +94,24 @@
  *  Also, this is the first resolution that we are able to show the News and Events.
  */
 @media (min-width: 890px) {
+  html > body > header > div:after {
+    content: " ";
+    display: table;
+    clear: both; }
   html > body > header > div > a {
+    height: 114px;
+    width: 101px;
     float: left;
-    margin-right: 25px; }
+    margin-right: 25px;
+    background: url(../img/logo.png); }
+  html > body > header > div > h2 {
+    float: left;
+    margin: 0;
+    color: #003082;
+    margin: 0;
+    font-size: 185%;
+    line-height: 100px;
+    height: 114px; }
   html > body > div {
     position: relative;
     padding-top: 43px; }
@@ -250,7 +265,7 @@
       clear: both; }
     html > body > footer > p {
       margin: 0 10px; }
-    html > body > footer > p#office-phone {
+    html > body > footer > p#seo-links {
       float: right; }
   html > body > #mobile-menu,
   html > body > #mobile-menu-button {
@@ -262,6 +277,10 @@
 @media (max-width: 889px) {
   html > body > header {
     background: #004b8d; }
+    html > body > header > div > a {
+      height: 90px;
+      width: 80px;
+      background: url(../img/logo-mobile.png); }
     html > body > header > div > h2 {
       display: none; }
   html > body nav {
@@ -315,7 +334,7 @@
   html > body > nav#mobile-menu {
     display: none;
     position: absolute;
-    top: 141px;
+    top: 117px;
     left: 0;
     right: 0;
     bottom: 0;

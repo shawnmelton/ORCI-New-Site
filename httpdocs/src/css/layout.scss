@@ -16,7 +16,6 @@ html {
 		margin: 0;
 
 		>header {
-			height: 114px;
 			padding: 12px 25px 15px;
 			overflow: hidden;
 			background: #fff;
@@ -25,31 +24,12 @@ html {
 			background: linear-gradient(#fff, $headerLightGray);
 
 			>div {
-				&:after {
-					content: " ";
-					display: table;
-					clear: both;
-				}
-
 				>a {
 					display: block;
-					height: 114px;
-					width: 101px;
 					outline: none;
 					cursor: pointer;
-					background: url(../img/logo.png);
 
 					>span { display: none; }
-				}
-
-				>h2 {
-					float: left;
-					margin: 0;
-					color: $blue;
-					margin: 0;
-					font-size: 185%;
-					line-height: 100px;
-					height: 116px;
 				}
 			}
 		}
@@ -153,10 +133,21 @@ html {
 		}
 
 		>footer {
-			color: #aaa;
+			color: #888;
 			font-size: 90%;
 
-			>p { margin: 0; }
+			>p {
+				margin: 0;
+
+				>a {
+					color: #aaa;
+					text-decoration: none;
+					outline: none;
+					cursor: pointer;
+
+					&:hover { text-decoration: underline; }
+				}
+			}
 		}
 	}
 }

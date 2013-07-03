@@ -158,9 +158,28 @@ $logoBlue: #004B8D;
 		>body {
 			>header {
 				>div {
+					&:after {
+						content: " ";
+						display: table;
+						clear: both;
+					}
+
 					>a {
+						height: 114px;
+						width: 101px;
 						float: left;
 						margin-right: 25px;
+						background: url(../img/logo.png);
+					}
+
+					>h2 {
+						float: left;
+						margin: 0;
+						color: $blue;
+						margin: 0;
+						font-size: 185%;
+						line-height: 100px;
+						height: 114px;
 					}
 				}
 			}
@@ -369,7 +388,7 @@ $logoBlue: #004B8D;
 				}
 
 				>p { margin: 0 10px; }
-				>p#office-phone { float: right; }
+				>p#seo-links { float: right; }
 			}
 
 			>#mobile-menu, 
@@ -389,6 +408,12 @@ $logoBlue: #004B8D;
 				background: $logoBlue;
 
 				>div {
+					>a {
+						height: 90px;
+						width: 80px;
+						background: url(../img/logo-mobile.png);
+					}
+
 					>h2 { display: none; }
 				}
 			}
@@ -482,7 +507,7 @@ $logoBlue: #004B8D;
 			>nav#mobile-menu {
 				display: none;
 				position: absolute;
-				top: 141px;
+				top: 117px;
 				left: 0;
 				right: 0;
 				bottom: 0;
