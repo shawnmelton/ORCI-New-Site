@@ -368,7 +368,7 @@ $logoBlue: #004B8D;
 						}
 					}
 
-					>#content { 
+					>#content {
 						min-height: 290px;
 						background-image: url(../img/contentBottomBG.png);
 						background-repeat: repeat-x;
@@ -437,9 +437,7 @@ $logoBlue: #004B8D;
 					border-bottom: 1px solid #777;
 					padding-left: 12px;
 
-					&:hover {
-						background: #222;
-					}
+					&:hover { background: #222; }
 				}
 
 				>ul {
@@ -483,6 +481,10 @@ $logoBlue: #004B8D;
 
 							&:first-child { margin-right: 15px; }
 						}
+					}
+
+					>#content {
+						min-height: 100px;
 					}
 				}
 			}

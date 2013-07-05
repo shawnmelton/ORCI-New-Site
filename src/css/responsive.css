@@ -318,6 +318,8 @@
       margin-right: 0; }
       html > body > div > section > #featured-products > p:first-child {
         margin-right: 15px; }
+  html > body > div > section > #content {
+    min-height: 100px; }
   html > body > #mobile-menu-button {
     position: absolute;
     top: 15px;
