@@ -1,4 +1,4 @@
-define(['jquery', 'views/banners', 'tools/mobileMenu', 'views/newsAndEvents'], function($, banners, MobileMenu, newsAndEvents) {
+define(['jquery', 'views/banners', 'tools/mobileMenu', 'views/newsAndEvents', 'tools/urlTranslator'], function($, banners, MobileMenu, newsAndEvents, UrlTranslator) {
 	var ResponsiveLayout = function() {};
 	ResponsiveLayout.prototype = {
 		width: 0,
@@ -33,7 +33,7 @@ define(['jquery', 'views/banners', 'tools/mobileMenu', 'views/newsAndEvents'], f
 		performFullSizeChanges: function() {
 			if(this.fullSizeLoaded === false && this.width >= 1066 && (this.origWidth == 0 || this.origWidth < 1066)) {
 				this.fullSizeLoaded = true;
-				$("body").prepend('<img src="dist/img/bg.png" alt="Background image">');
+				$("body").prepend('<img src="'+ UrlTranslator.getSubFolder() +'/img/bg.png" alt="Background image">');
 				banners.render();
 			}
 		},

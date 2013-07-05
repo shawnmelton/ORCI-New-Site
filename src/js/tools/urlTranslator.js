@@ -7,14 +7,19 @@ define([], function() {
 	var UrlTranslator = function() {};
 	UrlTranslator.prototype = {
 		domain: false,
+		subFolder: "",
 
 		/**
 		 * Detemine the domain of the current site.
 		 */
-		determineDomain: function() {
+		 determineDomain: function() {
+		 	if(location.href.indexOf(".com/demo") != -1) {
+		 		this.subFolder = "/demo";
+			}
+
 			var urlParts = location.href.split(".com");
 			if(urlParts[0]) {
-				return urlParts[0] +".com";
+				return urlParts[0] + ".com";
 			}
 
 			return ""; // Error detecting domain
@@ -45,15 +50,19 @@ define([], function() {
 			return url.replace(this.getDomain(), "");
 		},
 
+		getSubFolder: function() {
+			return this.subFolder;
+		},
+
 		/**
 		 * Translate a site url to a url that Wordpress will recognize.
 		 */
 		toWP: function(url) {
-			if(url.indexOf(this.getDomain() +"/#") !== -1) {
-				url = url.replace(this.getDomain() +"/#", this.getDomain() +"/");
+			if(url.indexOf(this.getDomain() + this.subFolder +"/#") !== -1) {
+				url = url.replace(this.getDomain() + this.subFolder +"/#", this.getDomain() + this.subFolder +"/");
 			}
 
-			return url.replace(this.getDomain(), this.getDomain() +"/content");
+			return url.replace(this.getDomain() + this.subFolder, this.getDomain() + this.subFolder + "/content");
 		},
 
 		/**

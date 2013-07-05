@@ -78,6 +78,8 @@ html {
 					a {
 						color: $logoBlue;
 
+						img { border: 0; }
+
 						&:hover {
 							text-decoration: none;
 							color: lighten($logoBlue, 10%);

@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 			}
 		},
 		concat: {
-			dist: {
+			scripts: {
 				src: ['src/js/libs/css3-mediaqueries.js', 'src/js/libs/html5.js'],
 				dest: 'httpdocs/js/ie-lte-9.js'
 			}
@@ -116,5 +116,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-contrib-imagemin");
 	grunt.loadNpmTasks("grunt-contrib-htmlmin");
 	grunt.loadNpmTasks("grunt-contrib-watch");
-	grunt.registerTask('default', ['jshint', 'requirejs', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'htmlmin', 'watch']);
+	grunt.registerTask('default', ['jshint', 'requirejs', 'uglify', 'sass', 'cssmin', 'concat', 'imagemin', 'htmlmin', 'watch']);
 };

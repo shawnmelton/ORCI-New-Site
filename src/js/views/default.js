@@ -43,7 +43,7 @@ define([
 			 * Navigate to the provided link without reloading the browser.
 			 */
 			onLinkClick: function(event, target) {
-				if(UrlTranslator.urlIsSameDomain(target.attr("href"))) {
+				if(!!(window.history && window.history.pushState) && UrlTranslator.urlIsSameDomain(target.attr("href"))) {
 					event.preventDefault();
 					appRouter.navigate(UrlTranslator.getRelativeUrl(target.attr("href")), {
 						trigger: true,

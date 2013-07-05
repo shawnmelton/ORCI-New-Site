@@ -25,7 +25,7 @@ define([
 			 * @return String
 			 */
 			getUrl: function() {
-				return UrlTranslator.toWP(UrlTranslator.getDomain() +"/home/");
+				return UrlTranslator.toWP(UrlTranslator.getDomain() + UrlTranslator.getSubFolder() +"/home/");
 			},
 
 			/**

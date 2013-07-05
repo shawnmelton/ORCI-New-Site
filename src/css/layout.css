@@ -50,6 +50,8 @@ html {
         font-size: 120%; }
       html > body > div > section > #content a {
         color: #004b8d; }
+        html > body > div > section > #content a img {
+          border: 0; }
         html > body > div > section > #content a:hover {
           text-decoration: none;
           color: #0066c0; }

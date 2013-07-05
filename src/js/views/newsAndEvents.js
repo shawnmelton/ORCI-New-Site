@@ -32,18 +32,20 @@ define([
 			 * Get the api url to fetch news articles.
 			 */
 			getArticlesUrl: function() {
-				return UrlTranslator.toWP(UrlTranslator.getDomain() +"/api/get_recent_posts/");
+				return UrlTranslator.toWP(UrlTranslator.getDomain() + UrlTranslator.getSubFolder() +"/api/get_recent_posts/");
 			},
 
 			/**
 			 * Navigate to the provided link without reloading the browser.
 			 */
 			onLinkClick: function(event) {
-				event.preventDefault();
-				appRouter.navigate(UrlTranslator.getRelativeUrl($(event.currentTarget).attr("href")), {
-					trigger: true,
-					replace: true
-				});
+				if(!!(window.history && window.history.pushState)) {
+					event.preventDefault();
+					appRouter.navigate(UrlTranslator.getRelativeUrl($(event.currentTarget).attr("href")), {
+						trigger: true,
+						replace: true
+					});
+				}
 			},
 
 			/**

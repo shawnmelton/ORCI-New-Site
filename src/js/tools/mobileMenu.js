@@ -10,7 +10,7 @@ define(['jquery', 'tools/urlTranslator'], function($, UrlTranslator) {
 		 */
 		addLinkEvents: function() {
 			var _this = this;
-			this.menu.find("a").bind("click touchstart", function(e){
+			this.menu.find("a").bind("click", function(e){
 				_this.onLinkClick(e, $(this));
 			});
 		},
@@ -36,7 +36,7 @@ define(['jquery', 'tools/urlTranslator'], function($, UrlTranslator) {
 			this.button = $("#mobile-menu-button");
 
 			var _this = this;
-			this.button.bind("click touchstart", function() {
+			this.button.bind("click", function() {
 				_this.toggle();
 			});
 		},

@@ -14,14 +14,14 @@ define([
 			 * Get the api url to fetch menu items.
 			 */
 			getMenuUrl: function() {
-				return UrlTranslator.toWP(UrlTranslator.getDomain() +"/api/get_primary_menu/");
+				return UrlTranslator.toWP(UrlTranslator.getDomain() + UrlTranslator.getSubFolder() +"/api/get_primary_menu/");
 			},
 
 			/**
 			 * Navigate to the provided link without reloading the browser.
 			 */
 			onLinkClick: function(event) {
-				if(UrlTranslator.urlIsSameDomain($(event.currentTarget).attr("href"))) {
+				if(!!(window.history && window.history.pushState) && UrlTranslator.urlIsSameDomain($(event.currentTarget).attr("href"))) {
 					event.preventDefault();
 					appRouter.navigate(UrlTranslator.getRelativeUrl($(event.currentTarget).attr("href")), {
 						trigger: true,
