@@ -3,31 +3,47 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		jshint: {
-			all: ['gruntfile.js', 'httpdocs/src/js/*.js', 'httpdocs/src/tools/*.js', 'httpdocs/src/views/*.js']
+			all: ['gruntfile.js', 'src/js/*.js', 'src/tools/*.js', 'src/views/*.js']
 		},
 		requirejs: {
 			compile: {
 				options: {
-					baseUrl: "httpdocs/src/js/",
-					mainConfigFile: "httpdocs/src/js/bootstrap.js",
+					baseUrl: "src/js/",
+					mainConfigFile: "src/js/bootstrap.js",
 					name: "app",
 					include: ["bootstrap"],
-					out: "httpdocs/dist/js/app.min.js"
+					out: "httpdocs/js/app.min.js"
+				}
+			}
+		},
+		concat: {
+			dist: {
+				src: ['src/js/libs/css3-mediaqueries.js', 'src/js/libs/html5.js'],
+				dest: 'httpdocs/js/ie-lte-9.js'
+			}
+		},
+		uglify: {
+			options: {
+				report: 'min'
+			},
+			my_target: {
+				files: {
+					'httpdocs/js/require.min.js': ['src/js/libs/require.js']
 				}
 			}
 		},
 		sass: {
 			dist: {
 				files: {
-					"httpdocs/src/css/layout.css": ["httpdocs/src/css/layout.scss"],
-					"httpdocs/src/css/responsive.css": ["httpdocs/src/css/responsive.scss"],
+					"src/css/layout.css": ["src/css/layout.scss"],
+					"src/css/responsive.css": ["src/css/responsive.scss"],
 				}
 			}
 		},
 		cssmin: {
 			compress: {
 				files: {
-					'httpdocs/dist/css/styles.css': "httpdocs/src/css/*.css"
+					'httpdocs/css/styles.css': "src/css/*.css"
 				}
 			}
 		},
@@ -38,9 +54,9 @@ module.exports = function(grunt) {
 			dist: {
 				files: [{
 					expand: true,
-					cwd: 'httpdocs/src/img/',
+					cwd: 'src/img/',
 					src: ['*.png', '*.jpg'],
-					dest: 'httpdocs/dist/img/'
+					dest: 'httpdocs/img/'
 				}]
 			}
 		},
@@ -51,34 +67,34 @@ module.exports = function(grunt) {
 					collapseWhitespace: true
 				},
 				files: { 
-					'httpdocs/index.html' : 'httpdocs/src/index.html'
+					'httpdocs/index.html' : 'src/index.html'
 				}
 			}
 		},
 		watch: {
 			css: {
-				files: ['httpdocs/src/css/layout.scss', 'httpdocs/src/css/all-wp-styles.css', 'httpdocs/src/css/responsive.scss'],
+				files: ['src/css/layout.scss', 'src/css/all-wp-styles.css', 'src/css/responsive.scss'],
 				tasks: ['sass', 'cssmin'],
 				options: {
 					livereload: true
 				}
 			},
 			scripts: {
-				files: ['httpdocs/src/js/*.js', 'httpdocs/src/js/**/*.js'],
+				files: ['src/js/*.js', 'src/js/**/*.js'],
 				tasks: ['requirejs'],
 				options: {
 					livereload: true
 				}
 			},
 			images: {
-				files: ['httpdocs/src/img/*.png', 'httpdocs/src/img/*.jpg'],
+				files: ['src/img/*.png', 'src/img/*.jpg'],
 				tasks: ['imagemin'],
 				options: {
 					livereload: true
 				}
 			},
 			html: {
-				files: ['httpdocs/src/index.html'],
+				files: ['src/index.html'],
 				tasks: ['htmlmin'],
 				options: {
 					livereload: true
@@ -93,10 +109,12 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks("grunt-contrib-sass");
 	grunt.loadNpmTasks("grunt-contrib-cssmin");
 	grunt.loadNpmTasks("grunt-contrib-imagemin");
 	grunt.loadNpmTasks("grunt-contrib-htmlmin");
 	grunt.loadNpmTasks("grunt-contrib-watch");
-	grunt.registerTask('default', ['jshint', 'requirejs', 'sass', 'cssmin', 'imagemin', 'htmlmin', 'watch']);
+	grunt.registerTask('default', ['jshint', 'requirejs', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'htmlmin', 'watch']);
 };
