@@ -55,6 +55,13 @@ html {
         html > body > div > section > #content a:hover {
           text-decoration: none;
           color: #0066c0; }
+      html > body > div > section > #content ul {
+        margin: 10px 0;
+        padding: 0;
+        list-style-type: none; }
+        html > body > div > section > #content ul > li {
+          padding: 3px 0 3px 15px;
+          background: url(../img/listItemBG.png) no-repeat 0 8px; }
       html > body > div > section > #content #category-posts > article {
         padding: 20px 0;
         margin: 0 5px;
