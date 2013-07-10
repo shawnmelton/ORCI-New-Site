@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://dev.orci.com/content/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/3.5.2" -->
 <!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.2.9" -->
-<!-- generated-on="July 10, 2013 7:08 PM" -->
+<!-- generated-on="July 10, 2013 9:29 PM" -->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
 		<loc>http://dev.orci.com/</loc>
 		<lastmod>2013-10-21T19:07:31+00:00</lastmod>
@@ -8,8 +8,26 @@
 		<priority>1.0</priority>
 	</url>
 	<url>
+		<loc>http://dev.orci.com/open-roads-consulting-becomes-amag-technology-certified-under-amags-symmetry-extended-business-solutions-program/</loc>
+		<lastmod>2013-07-10T21:28:46+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://dev.orci.com/open-roads-consulting-successfully-launches-the-alaska-511-traveler-information-system/</loc>
+		<lastmod>2013-07-10T21:28:25+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://dev.orci.com/18th-its-massachusetts-annual-meeting-and-conference/</loc>
+		<lastmod>2013-07-10T21:25:41+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
 		<loc>http://dev.orci.com/future-post-is-here/</loc>
-		<lastmod>2013-07-10T19:08:04+00:00</lastmod>
+		<lastmod>2013-07-10T21:25:32+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
@@ -40,24 +58,6 @@
 	<url>
 		<loc>http://dev.orci.com/19th-annual-conference-exhibition-its-virginia-connecting-with-the-dot/</loc>
 		<lastmod>2013-07-03T18:40:52+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-	<url>
-		<loc>http://dev.orci.com/open-roads-consulting-becomes-amag-technology-certified-under-amags-symmetry-extended-business-solutions-program/</loc>
-		<lastmod>2013-06-28T18:34:58+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-	<url>
-		<loc>http://dev.orci.com/open-roads-consulting-successfully-launches-the-alaska-511-traveler-information-system/</loc>
-		<lastmod>2013-06-28T18:30:06+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-	<url>
-		<loc>http://dev.orci.com/18th-its-massachusetts-annual-meeting-and-conference/</loc>
-		<lastmod>2013-06-28T18:17:03+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>

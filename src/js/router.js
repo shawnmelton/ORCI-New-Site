@@ -5,9 +5,10 @@ define([
 	'views/home',
 	'views/default',
 	'views/categoryPosts',
+	'views/archivedPosts',
 	'views/menu',
 	'tools/urlTranslator'
-	], function($, _, Backbone, homeView, defaultView, categoryView, mainMenu, UrlTranslator){
+	], function($, _, Backbone, homeView, defaultView, categoryView, archivedView, mainMenu, UrlTranslator){
 		var AppRouter = Backbone.Router.extend({
 			initialize: function() {
 				this.route(/^(demo\/){0,1}.*/, 'showDefault');
@@ -19,7 +20,7 @@ define([
 			},
 
 			showArchives: function() {
-				this.showCategory("archives");
+				archivedView.render();
 			},
 
 			showCategory: function(category) {

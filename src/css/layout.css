@@ -71,12 +71,16 @@ html {
         html > body > div > section > #content ul > li {
           padding: 3px 0 3px 15px;
           background: url(../img/listItemBG.png) no-repeat 0 8px; }
+      html > body > div > section > #content #category-posts > h2 {
+        margin-top: 20px;
+        background: #ddd;
+        background: linear-gradient(#dddddd, #cccccc);
+        padding: 7px 10px;
+        margin-bottom: 0; }
       html > body > div > section > #content #category-posts > article {
         padding: 20px 0;
         margin: 0 5px;
         border-top: 1px dashed #aaa; }
-      html > body > div > section > #content #category-posts > article:first-child {
-        border-top-width: 0; }
     html > body > div > section > #featured-products {
       display: none; }
       html > body > div > section > #featured-products > div {

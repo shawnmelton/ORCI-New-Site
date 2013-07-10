@@ -1,0 +1,13 @@
+<h1><%= title %></h1>
+<div id="category-posts">
+	<% _.each(years, function(year) { %>
+		<h2><%= year.year %></h2>
+		<% _.each(year.posts, function(article) { %>
+		<article>
+			<h3><%= article.title %></h3>
+			<%= article.content %>
+		</article>
+		<% }); %>
+	<% }); %>
+</div>
+<%= noneMsg %>
