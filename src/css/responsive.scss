@@ -4,7 +4,7 @@ $logoBlue: #004B8D;
  *  Width: Minimum of 1066 pixels
  *  Description: This is styling that will only be applied when we have the necessary width to show the full website.
  */
-@media (min-width: 1066px) {
+@media screen and (min-width: 1066px) {
 	$innerContentWidth: 1066px;
 
 	html {
@@ -115,7 +115,7 @@ $logoBlue: #004B8D;
  *  Width: Maximum of 1065 pixels
  *  Description: Styling for site when it doesn't have the width required to display full site.
  */
-@media (max-width: 1065px) {
+@media screen and (max-width: 1065px) {
 	html {
 		>body {
 			>img { display: none; }
@@ -149,7 +149,7 @@ $logoBlue: #004B8D;
  *  Description: Full menu requires at least 890 pixels.  This will contain styles for hover based menu.
  *  Also, this is the first resolution that we are able to show the News and Events.
  */
-@media (min-width: 890px) {
+@media screen and (min-width: 890px) {
 	$blue: #003082;
 	$navGreen: #00594b;
 	$newsAndEventsGreen: #28A040;
@@ -403,7 +403,7 @@ $logoBlue: #004B8D;
  *  Width: Maximum of 889 pixels
  *  Description: Display a mobile-friendly menu 
  */
-@media (max-width: 889px) {
+@media screen and (max-width: 889px) {
 	html {
 		>body {
 			>header {
