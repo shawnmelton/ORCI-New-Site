@@ -21,6 +21,11 @@ define([
 			 * Navigate to the provided link without reloading the browser.
 			 */
 			onLinkClick: function(event) {
+				if(typeof $(event.currentTarget).attr("href") == "undefined") { // Link is being used to access child links and does not have a url.
+					event.preventDefault();
+					return;
+				}
+
 				if(!!(window.history && window.history.pushState) && UrlTranslator.urlIsSameDomain($(event.currentTarget).attr("href"))) {
 					event.preventDefault();
 					appRouter.navigate(UrlTranslator.getRelativeUrl($(event.currentTarget).attr("href")), {

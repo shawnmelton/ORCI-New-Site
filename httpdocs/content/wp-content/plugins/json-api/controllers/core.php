@@ -383,6 +383,7 @@ class JSON_API_Core_Controller {
         'post_type' => 'attachment',
         'orderby' => 'post_date',
         'order' => 'ASC',
+        'posts_per_page' => -1,
         'tax_query' => array(array(
           'taxonomy' => 'category',
           'field' => 'name',

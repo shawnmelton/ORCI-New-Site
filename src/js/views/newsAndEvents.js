@@ -56,7 +56,7 @@ define([
 				var noResultsFound = "<p><i>There are currently no news and events at this time.</i></p>";
 				$.getJSON(this.getArticlesUrl(), {
 					date_format: "M j, Y",
-					order: "ASC",
+					order: "DESC",
 					order_by: "date",
 					count: 5
 				}, function(response) {

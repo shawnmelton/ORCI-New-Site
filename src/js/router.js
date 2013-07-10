@@ -11,7 +11,7 @@ define([
 		var AppRouter = Backbone.Router.extend({
 			initialize: function() {
 				this.route(/^(demo\/){0,1}.*/, 'showDefault');
-				this.route(/^(demo\/){0,1}news(\/|)$/, 'showNews');
+				// this.route(/^(demo\/){0,1}news(\/|)$/, 'showNews');
 				this.route(/^(demo\/){0,1}news\/archives(\/|)$/, 'showArchives');
 				this.route(/^(demo\/){0,1}news\/security-division(\/|)$/, 'showSecurity');
 				this.route(/^(demo\/){0,1}news\/transportation-division(\/|)$/, 'showTransportation');
@@ -35,10 +35,6 @@ define([
 			showHome: function(){
 				window.scrollTo(0, 0);
 				homeView.render();
-			},
-
-			showNews: function() {
-				this.showCategory("news");
 			},
 
 			showSecurity: function() {

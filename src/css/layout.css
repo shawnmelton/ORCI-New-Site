@@ -42,12 +42,21 @@ html {
         margin: 0;
         margin-bottom: 10px;
         color: #0b3d6f;
-        font-size: 155%;
-        font-weight: normal; }
+        font-size: 16pt; }
+      html > body > div > section > #content h2 {
+        margin-top: 0;
+        font-size: 14pt;
+        color: #333; }
       html > body > div > section > #content h3 {
         margin: 0 0 5px;
         color: #36c;
-        font-size: 120%; }
+        font-size: 12pt; }
+      html > body > div > section > #content h4 {
+        margin-top: 0;
+        font-size: 10pt; }
+      html > body > div > section > #content h5 {
+        margin-top: 0;
+        font-size: 8pt; }
       html > body > div > section > #content a {
         color: #004b8d; }
         html > body > div > section > #content a img {
@@ -70,26 +79,52 @@ html {
         border-top-width: 0; }
     html > body > div > section > #featured-products {
       display: none; }
-      html > body > div > section > #featured-products > p {
+      html > body > div > section > #featured-products > div {
         position: relative;
-        margin: 0;
-        width: 248px;
-        height: 172px;
-        background: url(../img/featuredProducts.png) no-repeat 0 -172px; }
-        html > body > div > section > #featured-products > p:first-child {
+        width: 140px;
+        height: 151px;
+        color: #333;
+        background: url(../img/featuredProducts.png) no-repeat 0 -172px;
+        padding: 21px 5px 0 103px; }
+        html > body > div > section > #featured-products > div:first-child {
           margin-bottom: 5px;
-          background-position: 0 0; }
-        html > body > div > section > #featured-products > p > span {
-          display: none; }
-        html > body > div > section > #featured-products > p > a {
+          background-position: 0 0;
+          padding-top: 20px;
+          height: 152px; }
+        html > body > div > section > #featured-products > div > h4 {
           display: block;
-          height: 23px;
-          width: 94px;
+          color: #fff;
+          margin: 0 0 10px;
+          font-weight: normal;
+          text-transform: uppercase; }
+        html > body > div > section > #featured-products > div > p {
+          margin: 10px 0;
+          text-align: right;
+          font-size: 10px;
+          line-height: 15px; }
+        html > body > div > section > #featured-products > div > a {
+          display: block;
+          height: 18px;
+          line-height: 18px;
+          padding: 5px 0 0 15px;
+          width: 79px;
           position: absolute;
-          bottom: 0;
+          bottom: 1px;
           right: 0;
+          color: #333;
           cursor: pointer;
-          outline: none; }
+          outline: none;
+          font-size: 12px;
+          font-family: tahoma, sans-serif;
+          text-transform: uppercase;
+          text-decoration: none; }
+          html > body > div > section > #featured-products > div > a:hover {
+            color: #004b8d; }
+          html > body > div > section > #featured-products > div > a > span {
+            color: #004b8d;
+            font-weight: bold;
+            font-size: 11px;
+            letter-spacing: -2px; }
     html > body > div > section.home > #content h1 {
       display: none; }
     html > body > div > section.home > #featured-products {

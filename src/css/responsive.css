@@ -81,7 +81,7 @@
     display: none; }
   html > body > div > section > #featured-products {
     padding-top: 5px; }
-    html > body > div > section > #featured-products > p {
+    html > body > div > section > #featured-products > div {
       float: left;
       margin-right: 5px; }
     html > body > div > section > #featured-products:after {
@@ -182,6 +182,8 @@
                 padding: 0 15px;
                 height: 30px;
                 line-height: 30px;
+                cursor: pointer;
+                outline: none;
                 background: #004b8d;
                 background: -o-linear-gradient(#003d74, #003564);
                 background: -ms-linear-gradient(#003d74, #003564);
@@ -202,12 +204,12 @@
                     height: 30px;
                     line-height: 30px;
                     text-decoration: none;
-                    color: #222;
-                    border-top-width: 0;
                     padding: 0 15px;
                     font-weight: bold;
                     color: #cde;
-                    background: #333; }
+                    background: #333;
+                    cursor: pointer;
+                    outline: none; }
                     html > body > div > nav > ul > li > ul > li > ul > li > a:hover {
                       background: #222;
                       color: #bde; }
@@ -297,7 +299,9 @@
       min-height: 40px;
       line-height: 40px;
       border-bottom: 1px solid #777;
-      padding-left: 12px; }
+      padding-left: 12px;
+      cursor: pointer;
+      outline: none; }
       html > body nav a:hover {
         background: #222; }
     html > body nav > ul > li > a {
@@ -314,9 +318,9 @@
   html > body > div > section > #featured-products {
     background: #fff;
     padding: 0 15px 25px; }
-    html > body > div > section > #featured-products > p {
+    html > body > div > section > #featured-products > div {
       margin-right: 0; }
-      html > body > div > section > #featured-products > p:first-child {
+      html > body > div > section > #featured-products > div:first-child {
         margin-right: 15px; }
   html > body > div > section > #content {
     min-height: 100px; }

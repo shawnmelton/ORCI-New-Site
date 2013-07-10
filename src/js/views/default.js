@@ -18,7 +18,7 @@ define([
 				this.$el
 					.html(_.template(defaultHTML, {
 						title: title,
-						content: content
+						content: content +'<div class="clear"></div>'
 					}))
 					.parent().removeClass("home");
 
