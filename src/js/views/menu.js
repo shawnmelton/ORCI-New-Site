@@ -18,6 +18,18 @@ define([
 			},
 
 			/**
+			 * Add class "inactive" to menu links that do not have urls.
+			 */
+			inactivateDeadLinks: function() {
+				this.$el.find("a").each(function() {
+					var href = $(this).attr("href");
+					if(typeof href == "undefined" || href === false || href == "") {
+						$(this).addClass("inactive");
+					}
+				});
+			},
+
+			/**
 			 * Navigate to the provided link without reloading the browser.
 			 */
 			onLinkClick: function(event) {
@@ -43,6 +55,8 @@ define([
 						_this.$el.find("ul ul ul").each(function() {
 							$(this).parent().addClass("tertiary");
 						});
+
+						_this.inactivateDeadLinks();
 					}
 				});
 			}

@@ -1,5 +1,5 @@
 require.config({
-	urlArgs: "r="+ (new Date()).getTime(),
+	//urlArgs: "r="+ (new Date()).getTime(),
 
 	deps: ['app'],
 	paths: {

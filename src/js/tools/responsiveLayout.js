@@ -36,6 +36,10 @@ define(['jquery', 'views/banners', 'tools/mobileMenu', 'views/newsAndEvents', 't
 				$("body").prepend('<img src="'+ UrlTranslator.getSubFolder() +'/img/bg.png" alt="Background image">');
 				banners.render();
 			}
+
+			if($("body > img").length) { // Limit to the height of the page.
+				$("body > img").css("height", ($(window).height() - $("header").outerHeight() - 45) +"px");
+			}
 		},
 
 		/**

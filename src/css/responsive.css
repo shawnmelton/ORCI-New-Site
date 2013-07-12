@@ -153,6 +153,8 @@
             outline: none; }
             html > body > div > nav > ul > li > a:hover {
               background: #011F53; }
+            html > body > div > nav > ul > li > a.inactive {
+              cursor: default; }
           html > body > div > nav > ul > li > ul {
             display: none;
             position: absolute;
@@ -172,11 +174,10 @@
               /* Tertiary Links */ }
               html > body > div > nav > ul > li > ul > li > a {
                 display: block;
-                font-size: 110%;
+                font-size: 115%;
                 font-weight: bold;
                 color: #cde;
                 text-decoration: none;
-                text-transform: uppercase;
                 text-shadow: 0 0 1px #000;
                 border-bottom: 3px solid #00594b;
                 padding: 0 15px;
@@ -193,6 +194,14 @@
                   background: #00305a; }
                 html > body > div > nav > ul > li > ul > li > a:active {
                   background: #002241; }
+                html > body > div > nav > ul > li > ul > li > a.inactive {
+                  cursor: default; }
+                  html > body > div > nav > ul > li > ul > li > a.inactive:hover, html > body > div > nav > ul > li > ul > li > a.inactive:active {
+                    color: #cde;
+                    background: #004b8d;
+                    background: -o-linear-gradient(#003d74, #003564);
+                    background: -ms-linear-gradient(#003d74, #003564);
+                    background: linear-gradient(#003d74, #003564); }
               html > body > div > nav > ul > li > ul > li.tertiary {
                 padding-bottom: 5px; }
               html > body > div > nav > ul > li > ul > li > ul {

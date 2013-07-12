@@ -232,6 +232,8 @@ $logoBlue: #004B8D;
 								outline: none;
 
 								&:hover { background: #011F53; }
+
+								&.inactive { cursor: default; }
 							}
 
 							/* Secondary Links (Drop down navigation) */
@@ -257,11 +259,10 @@ $logoBlue: #004B8D;
 
 									>a {
 										display: block;
-										font-size: 110%;
+										font-size: 115%;
 										font-weight: bold;
 										color: #cde;
 										text-decoration: none;
-										text-transform: uppercase;
 										text-shadow: 0 0 1px #000;
 										border-bottom: 3px solid $navGreen;
 										padding: 0 15px;
@@ -280,6 +281,19 @@ $logoBlue: #004B8D;
 										}
 
 										&:active { background: darken($logoBlue, 15%); }
+
+										&.inactive {
+											cursor: default;
+
+											&:hover,
+											&:active { 
+												color: #cde;
+												background: $logoBlue;
+												background: -o-linear-gradient(darken($logoBlue, 5%), darken($logoBlue, 8%));
+												background: -ms-linear-gradient(darken($logoBlue, 5%), darken($logoBlue, 8%));
+												background: linear-gradient(darken($logoBlue, 5%), darken($logoBlue, 8%));
+											}
+										}
 									}
 
 									&.tertiary { padding-bottom: 5px; }
