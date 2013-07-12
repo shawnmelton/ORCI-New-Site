@@ -7,16 +7,16 @@ html {
     position: relative;
     margin: 0; }
     html > body > header {
-      padding: 12px 25px 15px;
+      padding: 15px 25px;
       overflow: hidden;
-      background: #fff;
-      background: -o-linear-gradient(white, #e3e3e3);
-      background: -ms-linear-gradient(white, #e3e3e3);
-      background: linear-gradient(white, #e3e3e3); }
+      background: #fff; }
       html > body > header > div > a {
         display: block;
         outline: none;
-        cursor: pointer; }
+        cursor: pointer;
+        height: 78px;
+        width: 70px;
+        background: url(../img/logo.png) no-repeat 0 0; }
         html > body > header > div > a > span {
           display: none; }
     html > body > div > section:after {

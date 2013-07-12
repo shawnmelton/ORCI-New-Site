@@ -6,7 +6,7 @@
   html > body > img {
     display: block;
     position: absolute;
-    top: 184px;
+    top: 151px;
     width: 100%;
     z-index: -1; }
   html > body > header > div {
@@ -99,19 +99,16 @@
     display: table;
     clear: both; }
   html > body > header > div > a {
-    height: 114px;
-    width: 101px;
     float: left;
-    margin-right: 25px;
-    background: url(../img/logo.png); }
+    margin-right: 25px; }
   html > body > header > div > h2 {
     float: left;
-    margin: 0;
-    color: #003082;
-    margin: 0;
-    font-size: 185%;
-    line-height: 100px;
-    height: 114px; }
+    margin: 12px 0 0;
+    width: 539px;
+    height: 56px;
+    background: url(../img/heading.png) no-repeat 0 0; }
+    html > body > header > div > h2 > span {
+      display: none; }
   html > body > div {
     position: relative;
     padding-top: 43px; }
@@ -257,7 +254,7 @@
               color: #28a040;
               text-decoration: none;
               cursor: pointer;
-              text-decoration: none; }
+              white-space: nowrap; }
               html > body > div > section > #news-and-events > article > p > a:hover {
                 text-decoration: underline; }
               html > body > div > section > #news-and-events > article > p > a:active {
@@ -288,10 +285,6 @@
 @media screen and (max-width: 889px) {
   html > body > header {
     background: #004b8d; }
-    html > body > header > div > a {
-      height: 90px;
-      width: 80px;
-      background: url(../img/logo-mobile.png); }
     html > body > header > div > h2 {
       display: none; }
   html > body nav {
@@ -337,19 +330,19 @@
     position: absolute;
     top: 15px;
     right: 15px;
-    height: 60px;
-    width: 60px;
+    height: 48px;
+    width: 48px;
     background: #00437e url(../img/mobileMenuButtonBG.png) no-repeat 0 0;
     border: 1px solid #003b6e;
     cursor: pointer;
     outline: none; }
   html > body > #mobile-menu-button.showing {
     background-color: #00305a;
-    background-position: 0 -60px; }
+    background-position: 0 -48px; }
   html > body > nav#mobile-menu {
     display: none;
     position: absolute;
-    top: 117px;
+    top: 107px;
     left: 0;
     right: 0;
     bottom: 0;

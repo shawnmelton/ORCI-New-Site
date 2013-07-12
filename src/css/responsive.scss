@@ -17,7 +17,7 @@ $logoBlue: #004B8D;
 			>img {
 				display: block;
 				position: absolute;
-				top: 184px;
+				top: 151px;
 				width: 100%;
 				z-index: -1;
 			}
@@ -165,21 +165,18 @@ $logoBlue: #004B8D;
 					}
 
 					>a {
-						height: 114px;
-						width: 101px;
 						float: left;
 						margin-right: 25px;
-						background: url(../img/logo.png);
 					}
 
 					>h2 {
 						float: left;
-						margin: 0;
-						color: $blue;
-						margin: 0;
-						font-size: 185%;
-						line-height: 100px;
-						height: 114px;
+						margin: 12px 0 0;
+						width: 539px;
+						height: 56px;
+						background: url(../img/heading.png) no-repeat 0 0;
+
+						>span { display: none; }
 					}
 				}
 			}
@@ -375,7 +372,7 @@ $logoBlue: #004B8D;
 									color: $newsAndEventsGreen;
 									text-decoration: none;
 									cursor: pointer;
-									text-decoration: none;
+									white-space: nowrap;
 
 									&:hover { text-decoration: underline; }
 									&:active { color: lighten($newsAndEventsGreen, 20%); }
@@ -424,12 +421,6 @@ $logoBlue: #004B8D;
 				background: $logoBlue;
 
 				>div {
-					>a {
-						height: 90px;
-						width: 80px;
-						background: url(../img/logo-mobile.png);
-					}
-
 					>h2 { display: none; }
 				}
 			}
@@ -513,8 +504,8 @@ $logoBlue: #004B8D;
 				position: absolute;
 				top: 15px;
 				right: 15px;
-				height: 60px;
-				width: 60px;
+				height: 48px;
+				width: 48px;
 				background: darken($logoBlue, 3%) url(../img/mobileMenuButtonBG.png) no-repeat 0 0;
 				border: 1px solid darken($logoBlue, 6%);
 				cursor: pointer;
@@ -522,12 +513,12 @@ $logoBlue: #004B8D;
 			}
 			>#mobile-menu-button.showing {
 				background-color: darken($logoBlue, 10%);
-				background-position: 0 -60px;
+				background-position: 0 -48px;
 			}
 			>nav#mobile-menu {
 				display: none;
 				position: absolute;
-				top: 117px;
+				top: 107px;
 				left: 0;
 				right: 0;
 				bottom: 0;
