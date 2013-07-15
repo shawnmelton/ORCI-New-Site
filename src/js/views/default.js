@@ -77,6 +77,6 @@ define([
 			}
 		});
 		
-		return new defaultView;
+		return new defaultView();
 	}
 );

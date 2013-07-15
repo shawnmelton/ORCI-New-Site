@@ -79,6 +79,6 @@ define([
 			}
 		});
 		
-		return new homeView;
+		return new homeView();
 	}
 );

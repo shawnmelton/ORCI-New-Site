@@ -23,7 +23,7 @@ define([
 			inactivateDeadLinks: function() {
 				this.$el.find("a").each(function() {
 					var href = $(this).attr("href");
-					if(typeof href == "undefined" || href === false || href == "") {
+					if(typeof href == "undefined" || href === false || href === "") {
 						$(this).addClass("inactive");
 					}
 				});
@@ -62,6 +62,6 @@ define([
 			}
 		});
 		
-		return new menuView;
+		return new menuView();
 	}
 );

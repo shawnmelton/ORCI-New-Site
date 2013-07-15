@@ -31,7 +31,7 @@ define(['jquery', 'views/banners', 'tools/mobileMenu', 'views/newsAndEvents', 't
 		 * Full size width >= 1066 pixels
 		 */
 		performFullSizeChanges: function() {
-			if(this.fullSizeLoaded === false && this.width >= 1066 && (this.origWidth == 0 || this.origWidth < 1066)) {
+			if(this.fullSizeLoaded === false && this.width >= 1066 && (this.origWidth === 0 || this.origWidth < 1066)) {
 				this.fullSizeLoaded = true;
 				$("body").prepend('<img src="'+ UrlTranslator.getSubFolder() +'/img/bg.png" alt="Background image">');
 				banners.render();
@@ -47,7 +47,7 @@ define(['jquery', 'views/banners', 'tools/mobileMenu', 'views/newsAndEvents', 't
 		 * Due to the provided designs, we are switching early to a mobile layout.  <= 889 pixels
 		 */
 		performMobileChanges: function() {
-			if(this.mobileSizeLoaded === false && this.width < 890 && (this.origWidth == 0 || this.origWidth >= 890)) {
+			if(this.mobileSizeLoaded === false && this.width < 890 && (this.origWidth === 0 || this.origWidth >= 890)) {
 				this.mobileSizeLoaded = true;
 				MobileMenu.init();
 			}
@@ -58,7 +58,7 @@ define(['jquery', 'views/banners', 'tools/mobileMenu', 'views/newsAndEvents', 't
 		 * Due to the provided designs, we are switching early to a mobile layout.  <= 889 pixels
 		 */
 		performNonMobileChanges: function() {
-			if(this.nonMobileSizeLoaded === false && this.width >= 890 && (this.origWidth == 0 || this.origWidth < 890)) {
+			if(this.nonMobileSizeLoaded === false && this.width >= 890 && (this.origWidth === 0 || this.origWidth < 890)) {
 				this.nonMobileSizeLoaded = true;
 				newsAndEvents.render();
 			}

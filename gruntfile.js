@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		jshint: {
-			all: ['gruntfile.js', 'src/js/*.js', 'src/tools/*.js', 'src/views/*.js']
+			all: ['gruntfile.js', 'src/js/*.js', 'src/js/tools/*.js', 'src/js/views/*.js']
 		},
 		requirejs: {
 			compile: {
@@ -81,7 +81,7 @@ module.exports = function(grunt) {
 			},
 			scripts: {
 				files: ['src/js/*.js', 'src/js/**/*.js'],
-				tasks: ['requirejs'],
+				tasks: ['jshint', 'requirejs'],
 				options: {
 					livereload: true
 				}

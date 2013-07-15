@@ -9,7 +9,7 @@ define(['jquery'], function($) {
 				$("meta[name="+ tagName +"]").remove();
 			}
 
-			$("head").append('<meta name="'+ tagName +'" content="'+ tagValue +'">')
+			$("head").append('<meta name="'+ tagName +'" content="'+ tagValue +'">');
 		}
 	};
 

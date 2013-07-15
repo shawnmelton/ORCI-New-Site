@@ -19,22 +19,28 @@ define([
 				this.route(/^(demo\/){0,1}$/, 'showHome');
 			},
 
+			loadNewPage: function() {
+				window.scrollTo(0, 0);
+				$("#content").html('<img src="/img/content-loading.gif" alt="Loading ..." id="loading">');
+			},
+
 			showArchives: function() {
+				this.loadNewPage();
 				archivedView.render();
 			},
 
 			showCategory: function(category) {
-				window.scrollTo(0, 0);
+				this.loadNewPage();
 				categoryView.render(category);
 			},
 
 			showDefault: function() {
-				window.scrollTo(0, 0);
+				this.loadNewPage();
 				defaultView.render();
 			},
 
 			showHome: function(){
-				window.scrollTo(0, 0);
+				this.loadNewPage();
 				homeView.render();
 			},
 

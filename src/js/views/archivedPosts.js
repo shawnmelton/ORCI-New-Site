@@ -52,7 +52,7 @@ define([
 					.html(_.template(archivedHTML, {
 						title: title,
 						years: this.getPostsByYear(posts),
-						noneMsg: (posts.length == 0) ? "<p><i>There are not currently any archived articles posted.</i></p>" : ""
+						noneMsg: (posts.length === 0) ? "<p><i>There are not currently any archived articles posted.</i></p>" : ""
 					}))
 					.parent().removeClass("home");
 			},
@@ -74,6 +74,6 @@ define([
 			}
 		});
 		
-		return new archivedView;
+		return new archivedView();
 	}
 );

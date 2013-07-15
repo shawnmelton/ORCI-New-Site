@@ -12,6 +12,6 @@ define([
 			}
 		});
 		
-		return new featuredProductsView;
+		return new featuredProductsView();
 	}
 );

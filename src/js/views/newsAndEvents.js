@@ -79,6 +79,6 @@ define([
 			}
 		});
 		
-		return new newsView;
+		return new newsView();
 	}
 );

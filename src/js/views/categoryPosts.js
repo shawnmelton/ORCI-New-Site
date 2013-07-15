@@ -27,7 +27,7 @@ define([
 					.html(_.template(categoryHTML, {
 						title: title,
 						articles: posts,
-						noneMsg: (posts.length == 0) ? "<p><i>There are not currently any articles posted for "+ title +".</i></p>" : ""
+						noneMsg: (posts.length === 0) ? "<p><i>There are not currently any articles posted for "+ title +".</i></p>" : ""
 					}))
 					.parent().removeClass("home");
 			},
@@ -47,6 +47,6 @@ define([
 			}
 		});
 		
-		return new categoryView;
+		return new categoryView();
 	}
 );

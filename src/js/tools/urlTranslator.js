@@ -12,9 +12,9 @@ define([], function() {
 		/**
 		 * Detemine the domain of the current site.
 		 */
-		 determineDomain: function() {
-		 	if(location.href.indexOf(".com/demo") != -1) {
-		 		this.subFolder = "/demo";
+		determineDomain: function() {
+			if(location.href.indexOf(".com/demo") != -1) {
+				this.subFolder = "/demo";
 			}
 
 			var urlParts = location.href.split(".com");
@@ -22,7 +22,7 @@ define([], function() {
 				return urlParts[0] + ".com";
 			}
 
-			return ""; // Error detecting domain
+			return "";
 		},
 
 		/**

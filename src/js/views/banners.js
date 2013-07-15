@@ -83,6 +83,6 @@ define([
 			}
 		});
 		
-		return new banners;
+		return new banners();
 	}
 );
