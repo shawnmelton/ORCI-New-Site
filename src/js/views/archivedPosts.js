@@ -17,16 +17,15 @@ define([
 				var postsByYear = [];
 				for(var index in posts) {
 					var yearIdx = false;
-					var postYear = new Date(posts[index].date).getFullYear();
 					for(var idx in postsByYear) {
-						if(postsByYear[idx].year == postYear) {
+						if(postsByYear[idx].year == posts[index].date) {
 							yearIdx = idx;
 						}
 					}
 
 					if(yearIdx === false) {
 						postsByYear.push({
-							year: postYear,
+							year: posts[index].date,
 							posts: [posts[index]]
 						});
 					} else {
@@ -64,7 +63,10 @@ define([
 			 */
 			render: function(){
 				var _this = this;
-				$.getJSON(this.getUrl(), { json: 1 }, function(response) {
+				$.getJSON(this.getUrl(), {
+					json: 1,
+					date_format: 'Y'
+				}, function(response) {
 					if(response && response.status && response.status === "ok") {
 						_this.loadContent(response.category.title, response.posts);
 					}

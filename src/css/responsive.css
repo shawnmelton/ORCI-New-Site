@@ -326,6 +326,8 @@
         margin-right: 15px; }
   html > body > div > section > #content {
     min-height: 100px; }
+  html > body > div > section > #featured-products > div > a > span {
+    letter-spacing: 0px; }
   html > body > #mobile-menu-button {
     position: absolute;
     top: 15px;
