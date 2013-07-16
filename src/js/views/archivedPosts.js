@@ -1,12 +1,11 @@
 define([
 	"jquery",
-	"underscore",
 	"backbone",
-	'text!templates/archivedPosts.html',
+	'templates/html.jst',
 	'tools/urlTranslator',
 	'tools/contentCache',
 	'tools/contentAdjuster'
-	], function($, _, Backbone, archivedHTML, UrlTranslator, ContentCache, ContentAdjuster){
+	], function($, Backbone, htmlJST, UrlTranslator, ContentCache, ContentAdjuster){
 		var archivedView = Backbone.View.extend({
 			el: "#content",
 
@@ -49,12 +48,17 @@ define([
 			 */
 			loadContent: function(title, posts) {
 				this.$el
-					.html(_.template(archivedHTML, {
+					.html(JST['src/js/templates/archivedPosts.html']({
 						title: title,
 						years: this.getPostsByYear(posts),
 						noneMsg: (posts.length === 0) ? "<p><i>There are not currently any archived articles posted.</i></p>" : ""
 					}))
 					.parent().removeClass("home");
+
+				ga('send', 'pageview', {
+					'page': location.pathname,
+					'title': title
+				});
 			},
 
 			/**

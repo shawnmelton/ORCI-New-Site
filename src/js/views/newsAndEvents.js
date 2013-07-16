@@ -1,10 +1,9 @@
 define([
 	"jquery",
-	"underscore",
 	"backbone",
-	'text!templates/newsAndEvents.html',
-	'tools/urlTranslator',
-	], function($, _, Backbone, newsHTML, UrlTranslator){
+	'templates/html.jst',
+	'tools/urlTranslator'
+	], function($, Backbone, htmlJST, UrlTranslator){
 		var newsView = Backbone.View.extend({
 			el: "#news-and-events",
 			events: {
@@ -70,7 +69,7 @@ define([
 						_this.$el.css("background-image", "none"); // Remove loading image.
 
 						_this.$el
-							.html(_.template(newsHTML, {
+							.html(JST['src/js/templates/newsAndEvents.html']({
 								articles: articles,
 								noResultsFound: noResultsFound
 							}));

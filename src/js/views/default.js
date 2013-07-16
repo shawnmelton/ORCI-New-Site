@@ -1,22 +1,22 @@
 define([
 	"jquery",
-	"underscore",
 	"backbone",
-	'text!templates/default.html',
+	'templates/html.jst',
 	'tools/urlTranslator',
 	'tools/contentCache',
 	'tools/contentAdjuster',
 	'tools/metaTagAdjuster'
-	], function($, _, Backbone, defaultHTML, UrlTranslator, ContentCache, ContentAdjuster, MetaTagAdjuster){
+	], function($, Backbone, htmlJST, UrlTranslator, ContentCache, ContentAdjuster, MetaTagAdjuster){
 		var defaultView = Backbone.View.extend({
 			el: "#content",
 
 			/**
 			 * Load this view's content
+			 * Register the page view with Google Analytics as well: ga('send', ...);
 			 */
 			loadContent: function(title, content) {
 				this.$el
-					.html(_.template(defaultHTML, {
+					.html(JST['src/js/templates/default.html']({
 						title: title,
 						content: content +'<div class="clear"></div>'
 					}))
@@ -26,6 +26,11 @@ define([
 				var _this = this;
 				$("#content a").click(function(e) {
 					_this.onLinkClick(e, $(this));
+				});
+
+				ga('send', 'pageview', {
+					'page': location.pathname,
+					'title': title
 				});
 			},
 

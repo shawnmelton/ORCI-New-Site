@@ -1,12 +1,11 @@
 define([
 	"jquery",
-	"underscore",
 	"backbone",
-	'text!templates/categoryPosts.html',
+	'templates/html.jst',
 	'tools/urlTranslator',
 	'tools/contentCache',
 	'tools/contentAdjuster'
-	], function($, _, Backbone, categoryHTML, UrlTranslator, ContentCache, ContentAdjuster){
+	], function($, Backbone, htmlJST, UrlTranslator, ContentCache, ContentAdjuster){
 		var categoryView = Backbone.View.extend({
 			el: "#content",
 			category: false,
@@ -24,12 +23,17 @@ define([
 			 */
 			loadContent: function(title, posts) {
 				this.$el
-					.html(_.template(categoryHTML, {
+					.html(JST['src/js/templates/categoryPosts.html']({
 						title: title,
 						articles: posts,
 						noneMsg: (posts.length === 0) ? "<p><i>There are not currently any articles posted for "+ title +".</i></p>" : ""
 					}))
 					.parent().removeClass("home");
+
+				ga('send', 'pageview', {
+					'page': location.pathname,
+					'title': title
+				});
 			},
 
 			/**

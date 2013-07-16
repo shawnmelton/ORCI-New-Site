@@ -2,6 +2,13 @@ module.exports = function(grunt) {
 	"use strict";
 
 	grunt.initConfig({
+		jst: {
+			compile: {
+				files: {
+					"src/js/templates/html.jst.js": ["src/js/templates/*.html"]
+				}
+			}
+		},
 		jshint: {
 			all: ['gruntfile.js', 'src/js/*.js', 'src/js/tools/*.js', 'src/js/views/*.js']
 		},
@@ -99,6 +106,13 @@ module.exports = function(grunt) {
 				options: {
 					livereload: true
 				}
+			},
+			templates: {
+				files: ['src/js/templates/*.html'],
+				tasks: ['jst', 'requirejs'],
+				options: {
+					livereload: true
+				}
 			}
 		}
 	});
@@ -107,6 +121,7 @@ module.exports = function(grunt) {
 		grunt.log.writeln(filepath + ' has ' + action);
 	});
 
+	grunt.loadNpmTasks('grunt-contrib-jst');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-contrib-concat');
@@ -116,5 +131,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-contrib-imagemin");
 	grunt.loadNpmTasks("grunt-contrib-htmlmin");
 	grunt.loadNpmTasks("grunt-contrib-watch");
-	grunt.registerTask('default', ['jshint', 'requirejs', 'uglify', 'sass', 'cssmin', 'concat', 'imagemin', 'htmlmin', 'watch']);
+	grunt.registerTask('default', ['jst', 'jshint', 'requirejs', 'uglify', 'sass', 'cssmin', 'concat', 'imagemin', 'htmlmin', 'watch']);
 };

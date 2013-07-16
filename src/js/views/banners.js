@@ -1,11 +1,10 @@
 define([
 	"jquery",
-	"underscore",
 	"backbone",
 	"libs/jquery.cycle",
-	'text!templates/banners.html',
+	'templates/html.jst',
 	'tools/urlTranslator'
-	], function($, _, Backbone, cycle, bannersHTML, UrlTranslator){
+	], function($, Backbone, cycle, htmlJST, UrlTranslator){
 		var banners = Backbone.View.extend({
 			el: "#banner",
 
@@ -65,7 +64,7 @@ define([
 				$.getJSON(this.getUrl(), function(response) {
 					if(response && response.status && response.status === "ok") {
 						_this.$el
-							.html(_.template(bannersHTML, {
+							.html(JST['src/js/templates/banners.html']({
 								banners: response.images
 							}));
 

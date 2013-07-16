@@ -1,14 +1,13 @@
 define([
 	"jquery",
-	"underscore",
 	"backbone",
 	"views/featuredProducts",
-	'text!templates/home.html',
+	'templates/html.jst',
 	'tools/urlTranslator',
 	'tools/contentCache',
 	'tools/contentAdjuster',
 	'tools/metaTagAdjuster'
-	], function($, _, Backbone, featuredProductsView, homeHTML, UrlTranslator, ContentCache, ContentAdjuster, MetaTagAdjuster){
+	], function($, Backbone, featuredProductsView, htmlJST, UrlTranslator, ContentCache, ContentAdjuster, MetaTagAdjuster){
 		var homeView = Backbone.View.extend({
 			el: "#content",
 			events: {},
@@ -33,7 +32,7 @@ define([
 			 */
 			loadContent: function(title, content) {
 				this.$el
-					.html(_.template(homeHTML, {
+					.html(JST['src/js/templates/default.html']({
 						title: title,
 						content: content
 					}))

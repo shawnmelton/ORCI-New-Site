@@ -1,14 +1,13 @@
 define([
 	"jquery",
-	"underscore",
 	"backbone",
-	'text!templates/featuredProducts.html'
-	], function($, _, Backbone, featuredHTML){
+	'templates/html.jst'
+	], function($, Backbone, htmlJST){
 		var featuredProductsView = Backbone.View.extend({
 			el: "body > div > section",
 
 			render: function(){
-				this.$el.append(_.template(featuredHTML, {}));
+				this.$el.append(JST['src/js/templates/featuredProducts.html']);
 			}
 		});
 		

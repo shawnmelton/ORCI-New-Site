@@ -13,16 +13,11 @@ define([], function() {
 		 * Detemine the domain of the current site.
 		 */
 		determineDomain: function() {
-			if(location.href.indexOf(".com/demo") != -1) {
+			if(location.pathname.indexOf("/demo") != -1) {
 				this.subFolder = "/demo";
 			}
 
-			var urlParts = location.href.split(".com");
-			if(urlParts[0]) {
-				return urlParts[0] + ".com";
-			}
-
-			return "";
+			return "http://"+ location.hostname;
 		},
 
 		/**
