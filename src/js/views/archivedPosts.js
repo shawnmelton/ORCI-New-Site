@@ -40,7 +40,7 @@ define([
 			 * @return String
 			 */
 			getUrl: function() {
-				return UrlTranslator.toWP(UrlTranslator.getDomain() + UrlTranslator.getSubFolder() +"/category/archives/");
+				return UrlTranslator.toWP(UrlTranslator.getDomain() +"/category/archives/");
 			},
 
 			/**

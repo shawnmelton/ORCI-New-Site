@@ -11,12 +11,11 @@ define([
 	], function($, _, Backbone, homeView, defaultView, categoryView, archivedView, mainMenu, UrlTranslator){
 		var AppRouter = Backbone.Router.extend({
 			initialize: function() {
-				this.route(/^(demo\/){0,1}.*/, 'showDefault');
-				// this.route(/^(demo\/){0,1}news(\/|)$/, 'showNews');
-				this.route(/^(demo\/){0,1}news\/archives(\/|)$/, 'showArchives');
-				this.route(/^(demo\/){0,1}news\/security-division(\/|)$/, 'showSecurity');
-				this.route(/^(demo\/){0,1}news\/transportation-division(\/|)$/, 'showTransportation');
-				this.route(/^(demo\/){0,1}$/, 'showHome');
+				this.route(/^.*/, 'showDefault');
+				this.route(/^news\/archives(\/|)$/, 'showArchives');
+				this.route(/^news\/security-division(\/|)$/, 'showSecurity');
+				this.route(/^news\/transportation-division(\/|)$/, 'showTransportation');
+				this.route(/^$/, 'showHome');
 			},
 
 			loadNewPage: function() {

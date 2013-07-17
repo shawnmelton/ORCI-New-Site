@@ -31,7 +31,7 @@ define([
 			 * Get the api url to fetch news articles.
 			 */
 			getArticlesUrl: function() {
-				return UrlTranslator.toWP(UrlTranslator.getDomain() + UrlTranslator.getSubFolder() +"/api/get_recent_posts/");
+				return UrlTranslator.toWP(UrlTranslator.getDomain() +"/api/get_recent_posts/");
 			},
 
 			/**
