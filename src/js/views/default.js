@@ -48,7 +48,7 @@ define([
 			 * Navigate to the provided link without reloading the browser.
 			 */
 			onLinkClick: function(event, target) {
-				if(!!(window.history && window.history.pushState) && UrlTranslator.urlIsSameDomain(target.attr("href"))) {
+				if(!!(window.history && window.history.pushState) && UrlTranslator.urlIsSameDomain(target.attr("href")) && !target.attr("href").contains(".pdf")) {
 					event.preventDefault();
 					appRouter.navigate(UrlTranslator.getRelativeUrl(target.attr("href")), {
 						trigger: true,
