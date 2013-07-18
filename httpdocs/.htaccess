@@ -3,6 +3,7 @@ RewriteBase /
 
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !/maven/
 RewriteRule . index.html [L]
 
 # Adding default character set.
