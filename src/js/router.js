@@ -7,14 +7,16 @@ define([
 	'views/categoryPosts',
 	'views/archivedPosts',
 	'views/menu',
+	'views/certInquiryFormView',
 	'tools/urlTranslator'
-	], function($, _, Backbone, homeView, defaultView, categoryView, archivedView, mainMenu, UrlTranslator){
+	], function($, _, Backbone, homeView, defaultView, categoryView, archivedView, mainMenu, certInquiryFormView, UrlTranslator){
 		var AppRouter = Backbone.Router.extend({
 			initialize: function() {
 				this.route(/^.*/, 'showDefault');
 				this.route(/^news\/archives(\/|)$/, 'showArchives');
 				this.route(/^news\/security-division(\/|)$/, 'showSecurity');
 				this.route(/^news\/transportation-division(\/|)$/, 'showTransportation');
+				this.route(/^contact-us\/vicads-certifications-classes-inquiry-form(\/|)$/, 'showCertInquiryForm');
 				this.route(/^$/, 'showHome');
 			},
 
@@ -31,6 +33,11 @@ define([
 			showCategory: function(category) {
 				this.loadNewPage();
 				categoryView.render(category);
+			},
+
+			showCertInquiryForm: function() {
+				this.loadNewPage();
+				certInquiryFormView.render();
 			},
 
 			showDefault: function() {

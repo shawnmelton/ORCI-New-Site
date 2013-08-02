@@ -81,6 +81,74 @@ html {
         padding: 20px 0;
         margin: 0 5px;
         border-top: 1px dashed #aaa; }
+      html > body > div > section > #content form#cert-inquiry-form {
+        display: block;
+        padding: 5px 15px; }
+        html > body > div > section > #content form#cert-inquiry-form .req:after {
+          content: " * ";
+          color: #c22;
+          font-weight: bold; }
+        html > body > div > section > #content form#cert-inquiry-form > p {
+          margin: 5px 0;
+          font-size: 90%;
+          font-style: italic;
+          color: #444; }
+        html > body > div > section > #content form#cert-inquiry-form > ol {
+          list-style: none;
+          margin: 15px 0;
+          padding: 0; }
+          html > body > div > section > #content form#cert-inquiry-form > ol > li {
+            padding: 0 0 15px; }
+            html > body > div > section > #content form#cert-inquiry-form > ol > li > label {
+              display: block;
+              font-weight: bold;
+              margin-bottom: 5px; }
+            html > body > div > section > #content form#cert-inquiry-form > ol > li > input, html > body > div > section > #content form#cert-inquiry-form > ol > li > select {
+              display: block;
+              width: 100%;
+              box-sizing: border-box;
+              border: 1px solid #333;
+              height: 25px;
+              font-size: 120%;
+              line-height: 25px;
+              padding: 3px 3px;
+              background: #f6f6f6;
+              background: -o-linear-gradient(white, #dddddd);
+              background: -ms-linear-gradient(white, #dddddd);
+              background: linear-gradient(white, #dddddd); }
+              html > body > div > section > #content form#cert-inquiry-form > ol > li > input#zip-code, html > body > div > section > #content form#cert-inquiry-form > ol > li > input#dates, html > body > div > section > #content form#cert-inquiry-form > ol > li > select#zip-code, html > body > div > section > #content form#cert-inquiry-form > ol > li > select#dates {
+                max-width: 250px; }
+              html > body > div > section > #content form#cert-inquiry-form > ol > li > input.error, html > body > div > section > #content form#cert-inquiry-form > ol > li > select.error {
+                border: 2px solid #833; }
+        html > body > div > section > #content form#cert-inquiry-form > div {
+          padding: 10px 0 0; }
+          html > body > div > section > #content form#cert-inquiry-form > div:after {
+            content: " ";
+            display: table;
+            clear: both; }
+          html > body > div > section > #content form#cert-inquiry-form > div > a {
+            display: block;
+            float: left;
+            cursor: pointer;
+            outline: none;
+            height: 32px;
+            line-height: 32px;
+            padding: 0 18px;
+            background: #ccc;
+            background: -o-linear-gradient(#dddddd, #bbbbbb);
+            background: -ms-linear-gradient(#dddddd, #bbbbbb);
+            background: linear-gradient(#dddddd, #bbbbbb);
+            color: #222;
+            font-weight: bold;
+            font-size: 120%;
+            border: 1px solid #333; }
+            html > body > div > section > #content form#cert-inquiry-form > div > a:first-child {
+              margin-right: 15px; }
+            html > body > div > section > #content form#cert-inquiry-form > div > a:hover {
+              background: #ddd; }
+            html > body > div > section > #content form#cert-inquiry-form > div > a:active {
+              background: #555;
+              color: #ddd; }
     html > body > div > section > #featured-products {
       display: none; }
       html > body > div > section > #featured-products > div {

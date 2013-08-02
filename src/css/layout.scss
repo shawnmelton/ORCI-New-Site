@@ -122,6 +122,98 @@ html {
 						margin: 0 5px;
 						border-top: 1px dashed #aaa;
 					}
+
+					form#cert-inquiry-form {
+						display: block;
+						padding: 5px 15px;
+
+						.req:after {
+							content: " * ";
+							color: #c22;
+							font-weight: bold;
+						}
+
+						>p {
+							margin: 5px 0;
+							font-size: 90%;
+							font-style: italic;
+							color: #444;
+						}
+
+						>ol {
+							list-style: none;
+							margin: 15px 0;
+							padding: 0;
+
+							>li {
+								padding: 0 0 15px;
+
+								>label {
+									display: block;
+									font-weight: bold;
+									margin-bottom: 5px;
+								}
+
+								>input, >select {
+									display: block;
+									width: 100%;
+									box-sizing: border-box;
+									border: 1px solid #333;
+									height: 25px;
+									font-size: 120%;
+									line-height: 25px;
+									padding: 3px 3px;
+									background: #f6f6f6;
+									background: -o-linear-gradient(#fff, #ddd);
+									background: -ms-linear-gradient(#fff, #ddd);
+									background: linear-gradient(#fff, #ddd);
+
+									&#zip-code, &#dates { max-width: 250px; }
+
+									&.error {
+										border: 2px solid #833;
+									}
+								}
+
+							}
+						}
+
+						>div {
+							padding: 10px 0 0;
+
+							&:after {
+								content: " ";
+								display: table;
+								clear: both;
+							}
+
+							>a {
+								display: block;
+								float: left;
+								cursor: pointer;
+								outline: none;
+								height: 32px;
+								line-height: 32px;
+								padding: 0 18px;
+								background: #ccc;
+								background: -o-linear-gradient(#ddd, #bbb);
+								background: -ms-linear-gradient(#ddd, #bbb);
+								background: linear-gradient(#ddd, #bbb);
+								color: #222;
+								font-weight: bold;
+								font-size: 120%;
+								border: 1px solid #333;
+
+								&:first-child { margin-right: 15px; }
+								&:hover { background: #ddd; }
+								&:active {
+									background: #555;
+									color: #ddd;
+
+								}
+							}
+						}
+					}
 				}
 
 				>#featured-products {
