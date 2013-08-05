@@ -16,7 +16,7 @@ define([
 				this.route(/^news\/archives(\/|)$/, 'showArchives');
 				this.route(/^news\/security-division(\/|)$/, 'showSecurity');
 				this.route(/^news\/transportation-division(\/|)$/, 'showTransportation');
-				this.route(/^contact-us\/vicads-certifications-classes-inquiry-form(\/|)$/, 'showCertInquiryForm');
+				this.route(/^contact-us\/vicads-certification-classes-inquiry-form(\/|)$/, 'showCertInquiryForm');
 				this.route(/^$/, 'showHome');
 			},
 

@@ -152,6 +152,16 @@ html {
 									display: block;
 									font-weight: bold;
 									margin-bottom: 5px;
+
+									&.empty:after,
+									&.invalid-zip:after,
+									&.invalid-email:after {
+										font-style: italic;
+										color: #c22;
+									}
+									&.empty:after { content: " * Field requires a valid entry."; }
+									&.invalid-zip:after { content: " * Zip code entered is not valid."; }
+									&.invalid-email:after { content: " * Email address entered is not valid."; }
 								}
 
 								>input, >select {
@@ -170,9 +180,7 @@ html {
 
 									&#zip-code, &#dates { max-width: 250px; }
 
-									&.error {
-										border: 2px solid #833;
-									}
+									&.error { border: 2px solid #833; }
 								}
 
 							}
@@ -204,7 +212,7 @@ html {
 								font-size: 120%;
 								border: 1px solid #333;
 
-								&:first-child { margin-right: 15px; }
+								&:first-child { margin-right: 25px; }
 								&:hover { background: #ddd; }
 								&:active {
 									background: #555;

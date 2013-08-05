@@ -19,6 +19,10 @@ define([
 			clearFormErrors: function() {
 				if(this.form !== null) {
 					this.form.find("input, select").removeClass("error");
+					this.form.find("label")
+						.removeClass("empty")
+						.removeClass('invalid-email')
+						.removeClass('invalid-zip');
 				}
 			},
 
@@ -68,6 +72,14 @@ define([
 			 */
 			showFieldError: function(field) {
 				field.addClass("error");
+
+				if(field.val() === "") {
+					field.prev().addClass("empty");
+				} else if(field.attr("id") === "email") {
+					field.prev().addClass("invalid-email");
+				} else if(field.attr("id") === "zip-code") {
+					field.prev().addClass("invalid-zip");
+				} 
 			},
 
 			/**

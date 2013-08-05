@@ -103,6 +103,15 @@ html {
               display: block;
               font-weight: bold;
               margin-bottom: 5px; }
+              html > body > div > section > #content form#cert-inquiry-form > ol > li > label.empty:after, html > body > div > section > #content form#cert-inquiry-form > ol > li > label.invalid-zip:after, html > body > div > section > #content form#cert-inquiry-form > ol > li > label.invalid-email:after {
+                font-style: italic;
+                color: #c22; }
+              html > body > div > section > #content form#cert-inquiry-form > ol > li > label.empty:after {
+                content: " * Field requires a valid entry."; }
+              html > body > div > section > #content form#cert-inquiry-form > ol > li > label.invalid-zip:after {
+                content: " * Zip code entered is not valid."; }
+              html > body > div > section > #content form#cert-inquiry-form > ol > li > label.invalid-email:after {
+                content: " * Email address entered is not valid."; }
             html > body > div > section > #content form#cert-inquiry-form > ol > li > input, html > body > div > section > #content form#cert-inquiry-form > ol > li > select {
               display: block;
               width: 100%;
@@ -143,7 +152,7 @@ html {
             font-size: 120%;
             border: 1px solid #333; }
             html > body > div > section > #content form#cert-inquiry-form > div > a:first-child {
-              margin-right: 15px; }
+              margin-right: 25px; }
             html > body > div > section > #content form#cert-inquiry-form > div > a:hover {
               background: #ddd; }
             html > body > div > section > #content form#cert-inquiry-form > div > a:active {

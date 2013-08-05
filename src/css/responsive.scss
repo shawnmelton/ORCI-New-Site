@@ -89,6 +89,11 @@ $logoBlue: #004B8D;
 
 					>#content {
 						width: 765px;
+
+						>form#cert-inquiry-form {
+							>img { float: right; }
+							>ol { max-width: 485px; }
+						}
 					}
 
 					>#featured-products {

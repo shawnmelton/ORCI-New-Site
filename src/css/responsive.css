@@ -60,6 +60,10 @@
     margin: 0 auto !important; }
     html > body > div > section > #content {
       width: 765px; }
+      html > body > div > section > #content > form#cert-inquiry-form > img {
+        float: right; }
+      html > body > div > section > #content > form#cert-inquiry-form > ol {
+        max-width: 485px; }
     html > body > div > section > #featured-products {
       margin-left: 5px;
       float: left;
