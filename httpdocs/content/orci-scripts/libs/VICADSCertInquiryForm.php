@@ -57,7 +57,8 @@ class VICADSCertInquiryForm {
 			);
 		}
 
-		$this->sendEmail('shawn.melton@openroadsconsulting.com');
+		// $this->sendEmail('shawn.melton@openroadsconsulting.com');
+		$this->sendEmail('shawn.melton@openroadsconsulting.com,christopher.sells@openroadsconsulting.com,carrie.asbill@openroadsconsulting.com,kevin.bray@openroadsconsulting.com,joseph.keith@openroadsconsulting.com,mark.thomas@openroadsconsulting.com');
 	}
 
 	/**
