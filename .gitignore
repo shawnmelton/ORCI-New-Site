@@ -225,3 +225,14 @@ httpdocs/css/.sass-cache/*/*
 
 # Grunt
 node_modules
+*.po
+
+*.txt
+
+httpdocs/content/wp-content/plugins/google-sitemap-generator/lang/sitemap-ja_SJIS.po
+
+httpdocs/content/wp-content/plugins/google-sitemap-generator/lang/sitemap-ja_UTF.po
+
+httpdocs/content/wp-content/plugins/google-sitemap-generator/readme-ar_AR.txt
+
+httpdocs/content/wp-content/plugins/google-sitemap-generator/readme-ar_AR.txt
