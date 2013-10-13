@@ -123,7 +123,7 @@ html {
 						border-top: 1px dashed #aaa;
 					}
 
-					form#cert-inquiry-form {
+					form.contactForm {
 						display: block;
 						padding: 5px 15px;
 
@@ -143,7 +143,6 @@ html {
 						>ol {
 							list-style: none;
 							margin: 15px 0;
-							padding: 0;
 
 							>li {
 								padding: 0 0 15px;
@@ -163,7 +162,13 @@ html {
 									&.invalid-zip:after { content: " * Zip code entered is not valid."; }
 									&.invalid-email:after { content: " * Email address entered is not valid."; }
 								}
+							}
+						}
 
+						ol {
+							padding: 0;
+
+							>li {
 								>input, >select {
 									display: block;
 									width: 100%;
@@ -178,11 +183,36 @@ html {
 									background: -ms-linear-gradient(#fff, #ddd);
 									background: linear-gradient(#fff, #ddd);
 
-									&#zip-code, &#dates { max-width: 250px; }
+									&#zip-code, &#dates, &#phone, &#fax, &#city, &#state { max-width: 250px; }
 
 									&.error { border: 2px solid #833; }
 								}
 
+								>input[type=checkbox] {
+									display: inline;
+									width: auto;
+									float: left;
+									margin-right: 15px;
+								}
+							}
+						}
+
+						ol.table {
+							display: table;
+							width: 100%;
+							margin: 0;
+
+							&.header {
+								>li { font-weight: bold; }
+							}
+
+							>li {
+								display: table-cell;
+								width: 23%;
+								text-align: left;
+								padding: 0 1%;
+								border: 2px solid #fff;
+								border-width: 2px 0;
 							}
 						}
 
@@ -221,6 +251,12 @@ html {
 								}
 							}
 						}
+					}
+
+					form#work-order-form {
+						>h2 { margin-bottom: 0; }
+
+						>ol#non-us-fields { display: none; }
 					}
 				}
 

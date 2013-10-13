@@ -8,8 +8,9 @@ define([
 	'views/archivedPosts',
 	'views/menu',
 	'views/certInquiryFormView',
+	'views/workOrderRequestForm',
 	'tools/urlTranslator'
-	], function($, _, Backbone, homeView, defaultView, categoryView, archivedView, mainMenu, certInquiryFormView, UrlTranslator){
+	], function($, _, Backbone, homeView, defaultView, categoryView, archivedView, mainMenu, certInquiryFormView, workOrderRequestFormView, UrlTranslator){
 		var AppRouter = Backbone.Router.extend({
 			initialize: function() {
 				this.route(/^.*/, 'showDefault');
@@ -17,6 +18,7 @@ define([
 				this.route(/^news\/security-division(\/|)$/, 'showSecurity');
 				this.route(/^news\/transportation-division(\/|)$/, 'showTransportation');
 				this.route(/^contact-us\/vicads-certification-classes-inquiry-form(\/|)$/, 'showCertInquiryForm');
+				this.route(/^contact-us\/work-order-request-form(\/|)$/, 'showWorkOrderForm');
 				this.route(/^$/, 'showHome');
 			},
 
@@ -56,6 +58,11 @@ define([
 
 			showTransportation: function() {
 				this.showCategory("transportation");
+			},
+
+			showWorkOrderForm: function() {
+				this.loadNewPage();
+				workOrderRequestFormView.render();
 			}
 		});
 		

@@ -1,0 +1,79 @@
+<h1>Work Order Request Form</h1>
+<form name="work-order-form" id="work-order-form" class="contactForm" method="post" action="">
+    <p>Required fields are marked with a red asterisk <span class="req">(</span>).</p>
+    <ol>
+        <li>
+            <label for="company" class="req">Company</label>
+            <input type="text" name="company" id="company">
+        </li>
+        <li>
+            <label for="contact" class="req">Contact</label>
+            <input type="text" name="contact" id="contact">
+        </li>
+        <li>
+            <input type="checkbox" name="located_in_us" id="located-in-us" value="1">
+            <label for="located-in-us">I am located in the United States</label>
+        </li>
+        <li>
+            <label for="street-address" class="req">Address</label>
+            <input type="text" name="street_address" id="street-address">
+        </li>
+        <li>
+            <label for="city" class="req">City</label>
+            <input type="text" name="city" id="city">
+        </li>
+    </ol>
+    <ol id="us-fields">
+        <li>
+            <label for="state" class="req">State</label>
+            <input type="text" name="state" id="state">
+        </li>
+        <li>
+            <label for="zip-code" class="req">Zip Code</label>
+            <input type="text" name="zip_code" id="zip-code">
+        </li>
+    </ol>
+    <ol id="non-us-fields">
+        <li>
+            <label for="state-territory" class="req">State / Territory</label>
+            <input type="text" name="state_territory" id="state-territory">
+        </li>
+        <li>
+            <label for="country" class="req">Country</label>
+            <input type="text" name="country" id="country">
+        </li>
+        <li>
+            <label for="postal-code" class="req">Postal Code</label>
+            <input type="text" name="postal_code" id="postal-code">
+        </li>
+    </ol>
+    <ol>
+        <li>
+            <label for="email" class="req">Email Address</label>
+            <input type="text" name="email" id="email">
+        </li>
+        <li>
+            <label for="phone" class="req">Phone Number</label>
+            <input type="text" name="phone_number" id="phone">
+        </li>
+        <li>
+            <label for="fax">Fax Number</label>
+            <input type="text" name="fax_number" id="fax">
+        </li>
+    </ol>
+    <div id="products-to-return">
+        <h2>Product Details</h2>
+        <ol class="table header">
+            <li>Item</li>
+            <li>Serial No.</li>
+            <li>Qty</li>
+            <li>Reason for Return</li>
+        </ol>
+    </div>
+    <p><a id="add-product">Add Another Product</a></p>
+    <div>
+        <a id="submit">Submit</a>
+        <a id="reset">Reset</a>
+        <input type="hidden" name="fns" value="cert-inquiry-form">
+    </div>
+</form>

@@ -51,13 +51,20 @@ define([
 			 * Display the 3 upcoming news and event articles.  Order them in ascending order (chronlogical)
 			 */
 			render: function(){
+				/**
+				 * Value is set in app.js.  Dev Mode turns off all API requests.
+				 */
+				if(devMode) {
+					return;
+				}
+
 				var _this = this;
 				var noResultsFound = "<p><i>There are currently no news and events at this time.</i></p>";
 				$.getJSON(this.getArticlesUrl(), {
 					date_format: "M j, Y",
 					order: "DESC",
 					order_by: "date",
-					count: 4
+					count: 6
 				}, function(response) {
 					if(response && response.status && response.status === "ok") {
 						var articles = [];

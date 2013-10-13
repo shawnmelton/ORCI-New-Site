@@ -60,6 +60,13 @@ define([
 			 * Add content and present the proper button.
 			 */
 			render: function() {
+				/**
+				 * Value is set in app.js.  Dev Mode turns off all API requests.
+				 */
+				if(devMode) {
+					return;
+				}
+
 				var _this = this;
 				$.getJSON(this.getUrl(), function(response) {
 					if(response && response.status && response.status === "ok") {
