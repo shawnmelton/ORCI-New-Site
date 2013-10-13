@@ -167,53 +167,48 @@ html {
 
 						ol {
 							padding: 0;
+						}
 
-							>li {
-								>input, >select {
-									display: block;
-									width: 100%;
-									box-sizing: border-box;
-									border: 1px solid #333;
-									height: 25px;
-									font-size: 120%;
-									line-height: 25px;
-									padding: 3px 3px;
-									background: #f6f6f6;
-									background: -o-linear-gradient(#fff, #ddd);
-									background: -ms-linear-gradient(#fff, #ddd);
-									background: linear-gradient(#fff, #ddd);
+						table {
+							border-collapse: collapse;
+							width: 100%;
 
-									&#zip-code, &#dates, &#phone, &#fax, &#city, &#state { max-width: 250px; }
+							th, td {
+								padding: 0 1%;
+								width: 23%;
+								text-align: left;
+							}
 
-									&.error { border: 2px solid #833; }
-								}
-
-								>input[type=checkbox] {
-									display: inline;
-									width: auto;
-									float: left;
-									margin-right: 15px;
-								}
+							td {
+								border: 5px solid #fff;
+								border-width: 5px 0;
 							}
 						}
 
-						ol.table {
-							display: table;
+						input, select {
+							display: block;
 							width: 100%;
-							margin: 0;
+							box-sizing: border-box;
+							border: 1px solid #333;
+							height: 25px;
+							font-size: 120%;
+							line-height: 25px;
+							padding: 3px 3px;
+							background: #f6f6f6;
+							background: -o-linear-gradient(#fff, #ddd);
+							background: -ms-linear-gradient(#fff, #ddd);
+							background: linear-gradient(#fff, #ddd);
 
-							&.header {
-								>li { font-weight: bold; }
-							}
+							&#zip-code, &#dates, &#phone, &#fax, &#city, &#state, &#postal-code, &#country, &#state-territory { max-width: 250px; }
 
-							>li {
-								display: table-cell;
-								width: 23%;
-								text-align: left;
-								padding: 0 1%;
-								border: 2px solid #fff;
-								border-width: 2px 0;
-							}
+							&.error { border: 2px solid #833; }
+						}
+
+						input[type=checkbox] {
+							display: inline;
+							width: auto;
+							float: left;
+							margin-right: 15px;
 						}
 
 						>div {
@@ -257,6 +252,27 @@ html {
 						>h2 { margin-bottom: 0; }
 
 						>ol#non-us-fields { display: none; }
+
+						.clearfix:after {
+							display: table;
+							content: " ";
+							clear: both;
+						}
+
+						#add-product {
+							display: block;
+							cursor: pointer;
+							outline: none;
+							text-decoration: none;
+							color: #060;
+							font-size: 125%;
+							font-weight: bold;
+							font-style: normal;
+							margin: 12px 10px 20px;
+							float: left;
+
+							&:hover { color: #080; }
+						}
 					}
 				}
 

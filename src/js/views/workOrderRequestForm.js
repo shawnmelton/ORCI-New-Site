@@ -8,6 +8,7 @@ define(['jquery', 'backbone', 'templates/html.jst'], function($, Backbone, htmlJ
                 'click #submit': 'onSubmitButtonClick',
                 'click #reset': 'onResetButtonClick',
                 'click #add-product': 'onAddProductClick',
+                'click #located-in-nonus': 'onLocationCheckboxClick',
                 'submit #work-order-form': 'onFormSubmission'
             },
 
@@ -47,6 +48,38 @@ define(['jquery', 'backbone', 'templates/html.jst'], function($, Backbone, htmlJ
                 } else {
                     event.preventDefault();
                 }
+            },
+
+            /**
+             * Handle what happens when the "I am located outside of the United States" button is clicked.
+             */
+            onLocationCheckboxClick: function() {
+                var fieldsToShow,
+                    fieldsToHide;
+
+                if($("#located-in-nonus").prop("checked")) { // Show Non-US fields
+                    fieldsToHide = $("#us-fields");
+                    fieldsToShow = $("#non-us-fields");
+                } else { // Show US fields
+                    fieldsToHide = $("#non-us-fields");
+                    fieldsToShow = $("#us-fields");
+                }
+
+                fieldsToShow.slideUp(function() {
+                    fieldsToHide.slideDown();
+                });
+
+                fieldsToShow.find("label").each(function() {
+                    if(!$(this).hasClass("req")) {
+                        $(this).addClass("req");
+                    }
+                });
+
+                fieldsToHide.find("label").each(function() {
+                    if($(this).hasClass("req")) {
+                        $(this).removeClass("req");
+                    }
+                });
             },
 
             /**

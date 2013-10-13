@@ -113,41 +113,38 @@ html {
                 content: " * Email address entered is not valid."; }
         html > body > div > section > #content form.contactForm ol {
           padding: 0; }
-          html > body > div > section > #content form.contactForm ol > li > input, html > body > div > section > #content form.contactForm ol > li > select {
-            display: block;
-            width: 100%;
-            box-sizing: border-box;
-            border: 1px solid #333;
-            height: 25px;
-            font-size: 120%;
-            line-height: 25px;
-            padding: 3px 3px;
-            background: #f6f6f6;
-            background: -o-linear-gradient(white, #dddddd);
-            background: -ms-linear-gradient(white, #dddddd);
-            background: linear-gradient(white, #dddddd); }
-            html > body > div > section > #content form.contactForm ol > li > input#zip-code, html > body > div > section > #content form.contactForm ol > li > input#dates, html > body > div > section > #content form.contactForm ol > li > input#phone, html > body > div > section > #content form.contactForm ol > li > input#fax, html > body > div > section > #content form.contactForm ol > li > input#city, html > body > div > section > #content form.contactForm ol > li > input#state, html > body > div > section > #content form.contactForm ol > li > select#zip-code, html > body > div > section > #content form.contactForm ol > li > select#dates, html > body > div > section > #content form.contactForm ol > li > select#phone, html > body > div > section > #content form.contactForm ol > li > select#fax, html > body > div > section > #content form.contactForm ol > li > select#city, html > body > div > section > #content form.contactForm ol > li > select#state {
-              max-width: 250px; }
-            html > body > div > section > #content form.contactForm ol > li > input.error, html > body > div > section > #content form.contactForm ol > li > select.error {
-              border: 2px solid #833; }
-          html > body > div > section > #content form.contactForm ol > li > input[type=checkbox] {
-            display: inline;
-            width: auto;
-            float: left;
-            margin-right: 15px; }
-        html > body > div > section > #content form.contactForm ol.table {
-          display: table;
-          width: 100%;
-          margin: 0; }
-          html > body > div > section > #content form.contactForm ol.table.header > li {
-            font-weight: bold; }
-          html > body > div > section > #content form.contactForm ol.table > li {
-            display: table-cell;
-            width: 23%;
-            text-align: left;
+        html > body > div > section > #content form.contactForm table {
+          border-collapse: collapse;
+          width: 100%; }
+          html > body > div > section > #content form.contactForm table th, html > body > div > section > #content form.contactForm table td {
             padding: 0 1%;
-            border: 2px solid #fff;
-            border-width: 2px 0; }
+            width: 23%;
+            text-align: left; }
+          html > body > div > section > #content form.contactForm table td {
+            border: 5px solid #fff;
+            border-width: 5px 0; }
+        html > body > div > section > #content form.contactForm input, html > body > div > section > #content form.contactForm select {
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+          border: 1px solid #333;
+          height: 25px;
+          font-size: 120%;
+          line-height: 25px;
+          padding: 3px 3px;
+          background: #f6f6f6;
+          background: -o-linear-gradient(white, #dddddd);
+          background: -ms-linear-gradient(white, #dddddd);
+          background: linear-gradient(white, #dddddd); }
+          html > body > div > section > #content form.contactForm input#zip-code, html > body > div > section > #content form.contactForm input#dates, html > body > div > section > #content form.contactForm input#phone, html > body > div > section > #content form.contactForm input#fax, html > body > div > section > #content form.contactForm input#city, html > body > div > section > #content form.contactForm input#state, html > body > div > section > #content form.contactForm input#postal-code, html > body > div > section > #content form.contactForm input#country, html > body > div > section > #content form.contactForm input#state-territory, html > body > div > section > #content form.contactForm select#zip-code, html > body > div > section > #content form.contactForm select#dates, html > body > div > section > #content form.contactForm select#phone, html > body > div > section > #content form.contactForm select#fax, html > body > div > section > #content form.contactForm select#city, html > body > div > section > #content form.contactForm select#state, html > body > div > section > #content form.contactForm select#postal-code, html > body > div > section > #content form.contactForm select#country, html > body > div > section > #content form.contactForm select#state-territory {
+            max-width: 250px; }
+          html > body > div > section > #content form.contactForm input.error, html > body > div > section > #content form.contactForm select.error {
+            border: 2px solid #833; }
+        html > body > div > section > #content form.contactForm input[type=checkbox] {
+          display: inline;
+          width: auto;
+          float: left;
+          margin-right: 15px; }
         html > body > div > section > #content form.contactForm > div {
           padding: 10px 0 0; }
           html > body > div > section > #content form.contactForm > div:after {
@@ -181,6 +178,23 @@ html {
         margin-bottom: 0; }
       html > body > div > section > #content form#work-order-form > ol#non-us-fields {
         display: none; }
+      html > body > div > section > #content form#work-order-form .clearfix:after {
+        display: table;
+        content: " ";
+        clear: both; }
+      html > body > div > section > #content form#work-order-form #add-product {
+        display: block;
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+        color: #060;
+        font-size: 125%;
+        font-weight: bold;
+        font-style: normal;
+        margin: 12px 10px 20px;
+        float: left; }
+        html > body > div > section > #content form#work-order-form #add-product:hover {
+          color: #080; }
     html > body > div > section > #featured-products {
       display: none; }
       html > body > div > section > #featured-products > div {
