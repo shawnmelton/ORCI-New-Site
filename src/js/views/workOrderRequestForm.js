@@ -3,6 +3,7 @@ define(['jquery', 'backbone', 'templates/html.jst'], function($, Backbone, htmlJ
             el: "#content",
             form: null,
             productCount: 1,
+            nonusFieldsChecked: false,
 
             events: {
                 'click #submit': 'onSubmitButtonClick',
@@ -57,7 +58,9 @@ define(['jquery', 'backbone', 'templates/html.jst'], function($, Backbone, htmlJ
                 var fieldsToShow,
                     fieldsToHide;
 
-                if($("#located-in-nonus").prop("checked")) { // Show Non-US fields
+                this.nonusFieldsChecked = !this.nonusFieldsChecked;
+
+                if(this.nonusFieldsChecked) { // Show Non-US fields
                     fieldsToHide = $("#us-fields");
                     fieldsToShow = $("#non-us-fields");
                 } else { // Show US fields
@@ -65,8 +68,8 @@ define(['jquery', 'backbone', 'templates/html.jst'], function($, Backbone, htmlJ
                     fieldsToShow = $("#us-fields");
                 }
 
-                fieldsToShow.slideUp(function() {
-                    fieldsToHide.slideDown();
+                fieldsToHide.slideUp(function() {
+                    fieldsToShow.slideDown();
                 });
 
                 fieldsToShow.find("label").each(function() {

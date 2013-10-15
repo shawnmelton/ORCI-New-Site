@@ -13,5 +13,12 @@ if($certInquiryForm->hasBeenSubmitted()) {
 	exit;
 }
 
+$workOrderForm = new WorkOrderRequestForm();
+if($workOrderForm->hasBeenSubmitted()) {
+    $workOrderForm->processSubmission();
+    header('Location: /contact-us/thank-you');
+    exit;
+}
+
 header('Location: /');
 exit;
