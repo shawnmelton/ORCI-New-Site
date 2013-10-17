@@ -107,7 +107,21 @@ html {
 							padding: 3px 0 3px 15px;
 							background: url(../img/listItemBG.png) no-repeat 0 8px;
 						}
+
+						&.indented {
+							margin-left: 25px;
+
+							strong { color: #00594b; }
+						}
 					}
+
+					p.indented { margin-left: 25px; }
+
+					span.italic {
+						font-style: italic;
+						color: #555;
+					}
+
 
 					/* News, Archives, etc. */
 					#category-posts > h2 {
@@ -183,6 +197,15 @@ html {
 								border: 5px solid #fff;
 								border-width: 5px 0;
 							}
+
+							tr.errorRow {
+								td {
+									input, select {
+										border: 1px solid #600;
+										background: #fee;
+									}
+								}
+							}
 						}
 
 						input, select {
@@ -248,7 +271,7 @@ html {
 						}
 					}
 
-					form#work-order-form {
+					form#rma-request-form {
 						>h2 { margin-bottom: 0; }
 
 						>ol#non-us-fields { display: none; }
@@ -362,6 +385,74 @@ html {
 					cursor: pointer;
 
 					&:hover { text-decoration: underline; }
+				}
+			}
+		}
+
+		#ack-overlay-bg {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			background: url(../img/mobileMenuBG.png) repeat 0 0;
+			cursor: pointer;
+		}
+		#ack-overlay {
+			position: absolute;
+			top: 5%;
+			left: 20%;
+			width: 60%;
+			border: 1px solid #000;
+			background: #fff;
+			padding: 20px 25px 45px;
+			box-shadow: 0 0 10px #000;
+			box-sizing: border-box;
+			z-index: 1000;
+			line-height: 1.4;
+
+			>h2 {
+				margin: 0 0 5px;
+				color: #36c;
+				font-size: 14pt;
+			}
+
+			>p {
+				margin-bottom: 35px;
+				line-height: 1.6;
+
+				>a {
+					color: $logoBlue;
+
+					&:hover {
+						text-decoration: none;
+						color: lighten($logoBlue, 10%);
+					}
+				}
+			}
+
+			>div {
+				&:after {
+					display: table;
+					content: " ";
+					clear: both;
+				}
+
+				>a {
+					dislay: block;
+					float: left;
+					background: #ccc;
+					font-weight: bold;
+					cursor: pointer;
+					outline: none;
+					padding: 8px 20px;
+
+					&:first-child {
+						margin-right: 15px;
+						background: #36c;
+						color: #fff;
+					}
 				}
 			}
 		}

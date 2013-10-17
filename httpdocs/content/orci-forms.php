@@ -13,9 +13,9 @@ if($certInquiryForm->hasBeenSubmitted()) {
 	exit;
 }
 
-$workOrderForm = new WorkOrderRequestForm();
-if($workOrderForm->hasBeenSubmitted()) {
-    $workOrderForm->processSubmission();
+$rmaForm = new RMARequestForm();
+if($rmaForm->hasBeenSubmitted()) {
+    $rmaForm->processSubmission();
     header('Location: /contact-us/thank-you');
     exit;
 }

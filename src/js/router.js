@@ -1,16 +1,6 @@
-define([
-	'jquery',
-	'underscore',
-	'backbone',
-	'views/home',
-	'views/default',
-	'views/categoryPosts',
-	'views/archivedPosts',
-	'views/menu',
-	'views/certInquiryFormView',
-	'views/workOrderRequestForm',
-	'tools/urlTranslator'
-	], function($, _, Backbone, homeView, defaultView, categoryView, archivedView, mainMenu, certInquiryFormView, workOrderRequestFormView, UrlTranslator){
+define(['jquery', 'backbone', 'views/home', 'views/default', 'views/categoryPosts', 'views/archivedPosts',
+	'views/menu', 'views/certInquiryFormView', 'views/workOrderRequestForm', 'views/termsAndConditions',
+	'tools/urlTranslator'], function($, Backbone, homeView, defaultView, categoryView, archivedView, mainMenu, certInquiryFormView, workOrderRequestFormView, termsAndConditionsView, UrlTranslator){
 		var AppRouter = Backbone.Router.extend({
 			initialize: function() {
 				this.route(/^.*/, 'showDefault');
@@ -18,7 +8,11 @@ define([
 				this.route(/^news\/security-division(\/|)$/, 'showSecurity');
 				this.route(/^news\/transportation-division(\/|)$/, 'showTransportation');
 				this.route(/^contact-us\/vicads-certification-classes-inquiry-form(\/|)$/, 'showCertInquiryForm');
-				this.route(/^contact-us\/work-order-request-form(\/|)$/, 'showWorkOrderForm');
+
+				// RMA Request Form URLs
+				this.route(/^contact-us\/rma-request-form(\/|)$/, 'showRMARequestForm');
+				this.route(/^contact-us\/rma-request-form\/return-policy(\/|)$/, 'showRMARequestTAndCs');
+				
 				this.route(/^$/, 'showHome');
 			},
 
@@ -60,9 +54,14 @@ define([
 				this.showCategory("transportation");
 			},
 
-			showWorkOrderForm: function() {
+			showRMARequestForm: function() {
 				this.loadNewPage();
 				workOrderRequestFormView.render();
+			},
+
+			showRMARequestTAndCs: function() {
+				this.loadNewPage();
+				termsAndConditionsView.render();
 			}
 		});
 		

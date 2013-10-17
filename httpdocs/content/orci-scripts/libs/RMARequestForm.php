@@ -1,9 +1,9 @@
 <?php
 /**
- * @desc Class handling Work Order Request form submissions.
+ * @desc Class handling RMA Request form submissions.
  * @author Shawn Melton <shawn.a.melton@gmail.com>
  */
-class WorkOrderRequestForm {
+class RMARequestForm {
     private $info;
     private $items;
 
@@ -15,7 +15,7 @@ class WorkOrderRequestForm {
     private function getHTMLMessage() {
         $msg = "<!doctype html><html><body style='font-family: \"Helvetica Neue\",Helvetica,Arial,sans-serif; font-size: 14px; margin: 0; padding: 15px;'>
             <img src='http://www.openroadsconsulting.com/img/logo.png' style='display: block; margin-bottom: 15px;'>To whom it may concern,<br><br>
-            A <strong>Work Order Request</strong> has been submitted on the Open Roads Consulting, Inc. website.  
+            An <strong>ISSD Online RMA Request</strong> has been submitted on the Open Roads Consulting, Inc. website.  
             The following information was submitted:<br><br><table>";
 
         foreach($this->info as $line) {
@@ -38,7 +38,7 @@ class WorkOrderRequestForm {
      */
     private function getTextMessage() {
         $msg = "To whom it may concern,\n\n".
-            "A Work Order Request has been submitted on the Open Roads Consulting, Inc. website.  The following information was submitted:\n";
+            "An ISSD Online RMA Request has been submitted on the Open Roads Consulting, Inc. website.  The following information was submitted:\n";
 
         foreach($this->info as $line) {
             $msg .= "{$line['label']}: {$line['value']}\n";
@@ -58,7 +58,7 @@ class WorkOrderRequestForm {
      * @return boolean
      */
     public function hasBeenSubmitted() {
-        return (isset($_POST['fns']) && $_POST['fns'] == 'work-order-form' && isset($_POST['work-order-form-v']) && $_POST['work-order-form-v'] == 1);
+        return (isset($_POST['fns']) && $_POST['fns'] == 'rma-request-form' && isset($_POST['rma-request-form-v']) && $_POST['rma-request-form-v'] == 1);
     }
 
 
@@ -98,8 +98,8 @@ class WorkOrderRequestForm {
             'text' => $this->getTextMessage()
         ));
 
-        echo $this->getHTMLMessage();
-        exit;
+        /*echo $this->getHTMLMessage();
+        exit;*/
         $mailer->send_to($to);
     }
 }

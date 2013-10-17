@@ -1,4 +1,4 @@
-define(['jquery', 'backbone', 'templates/html.jst'], function($, Backbone, htmlJST){
+define(['jquery', 'backbone', 'templates/html.jst', 'views/rmaConfirmation'], function($, Backbone, htmlJST, rmaConfirmationView){
         var workOrderRequestFormView = Backbone.View.extend({
             el: "#content",
             form: null,
@@ -10,7 +10,7 @@ define(['jquery', 'backbone', 'templates/html.jst'], function($, Backbone, htmlJ
                 'click #reset': 'onResetButtonClick',
                 'click #add-product': 'onAddProductClick',
                 'click #located-in-nonus': 'onLocationCheckboxClick',
-                'submit #work-order-form': 'onFormSubmission'
+                'submit #rma-request-form': 'onFormSubmission'
             },
 
             /**
@@ -44,7 +44,7 @@ define(['jquery', 'backbone', 'templates/html.jst'], function($, Backbone, htmlJ
              */
             onFormSubmission: function(event) {
                 if(this.form !== null && this.validSubmission()) {
-                    this.form.append('<input type="hidden" name="work-order-form-v" value="1">');
+                    this.form.append('<input type="hidden" name="rma-request-form-v" value="1">');
                     this.form.attr("action", "/content/orci-forms.php");
                 } else {
                     event.preventDefault();
@@ -95,6 +95,16 @@ define(['jquery', 'backbone', 'templates/html.jst'], function($, Backbone, htmlJ
                         $(this).val("");
                     });
                 }
+
+                // Remove the rows after the header and first row.
+                var rowCount = 1;
+                $("#products-to-return tr").each(function() {
+                    if(rowCount > 2) {
+                        $(this).remove();
+                    }
+
+                    rowCount++;
+                });
             },
 
             /**
@@ -102,7 +112,8 @@ define(['jquery', 'backbone', 'templates/html.jst'], function($, Backbone, htmlJ
              */
             onSubmitButtonClick: function() {
                 if(this.form !== null && this.validSubmission()) {
-                    this.form.submit();
+                    //this.form.submit();
+                    rmaConfirmationView.render();
                 }
             },
 
@@ -111,8 +122,11 @@ define(['jquery', 'backbone', 'templates/html.jst'], function($, Backbone, htmlJ
                     .html(JST['src/js/templates/workOrderRequestForm.html']({}))
                     .parent().removeClass("home");
 
-                this.form = $("#work-order-form");
+                this.form = $("#rma-request-form");
                 this.onAddProductClick(); // Add first row of table.
+
+                // TODO - Remove
+                rmaConfirmationView.render();
             },
 
             /**
@@ -128,6 +142,34 @@ define(['jquery', 'backbone', 'templates/html.jst'], function($, Backbone, htmlJ
                 } else if(field.attr("id") === "zip-code") {
                     field.prev().addClass("invalid-zip");
                 } 
+            },
+
+            /**
+             * Make sure the user has filled out the entire row of information.
+             */
+            validateProducts: function() {
+                var noErrors = true;
+                $("#products-to-return tr").each(function() {
+                    var fieldHasValue = false;
+                    var notAllFieldsHaveValues = false;
+
+                    $(this).find("input, select").each(function() {
+                        if(!fieldHasValue && $(this).val() !== "") {
+                            fieldHasValue = true;
+                        } else if(notAllFieldsHaveValues === false && $(this).val() === "") {
+                            notAllFieldsHaveValues = true;
+                        }
+                    });
+
+                    if(fieldHasValue && notAllFieldsHaveValues) {
+                        noErrors = false;
+                        $(this).addClass("errorRow");
+                    } else {
+                        $(this).removeClass("errorRow");
+                    }
+                });
+
+                return noErrors;
             },
 
             /**
@@ -150,6 +192,10 @@ define(['jquery', 'backbone', 'templates/html.jst'], function($, Backbone, htmlJ
                         noErrors = false;
                     }
                 });
+
+                if(!this.validateProducts()) {
+                    noErrors = false;
+                }
 
                 return noErrors;
             }
