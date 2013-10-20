@@ -19,6 +19,7 @@ class Mailer {
 			'replyto_email' 			=> null,
 			'replyto_name' 				=> null,
 			'html' 						=> null,
+			'bcc'						=> '',
 			'attachments' 				=> array(),
 			'verbose' 					=> false
 		);
@@ -126,6 +127,10 @@ class Mailer {
 		$headersArr = array($this->mkfromhdr());
 		if( ($replytohdr = $this->mkreplytohdr()) != '' ) {
 			$headersArr[] = $replytohdr;
+		}
+
+		if(strlen($this->bcc) > 0) {
+			$headersArr[] = 'Bcc: '. $this->bccomp(De, right_operand);
 		}
 		
 		$headersArr[] = 'Date: '. date('r');

@@ -1,9 +1,10 @@
-define(['jquery', 'backbone', 'templates/html.jst', 'views/rmaConfirmation'], function($, Backbone, htmlJST, rmaConfirmationView){
+define(['jquery', 'backbone', 'underscore', 'templates/html.jst', 'views/rmaConfirmation'], function($, Backbone, _, htmlJST, rmaConfirmationView){
     var workOrderRequestFormView = Backbone.View.extend({
         el: "#content",
         form: null,
         productCount: 1,
         nonusFieldsChecked: false,
+        productItems: [],
 
         events: {
             'click #submit': 'onSubmitButtonClick',
@@ -30,11 +31,31 @@ define(['jquery', 'backbone', 'templates/html.jst', 'views/rmaConfirmation'], fu
          * Handle what happens when the "Add Product" button is clicked.
          */
         onAddProductClick: function() {
+            if(this.productItems.length === 0) {
+                var _this = this;
+                $.getJSON('/content/orci-rest.php', {
+                    type: 'rma-product-items'
+                }, function(items) {
+                    if(items !== null && items.length > 0) {
+                        _this.productItems = items;
+                        _this.onAddProductClick();
+                    }
+                });
+
+                return; // Stop method until ajax request comes back.
+            }
+
             $("#products-to-return").append(
                 JST['src/js/templates/productReturnFields.html']({
-                    cnt: this.productCount
+                    cnt: this.productCount,
+                    items: this.productItems
                 })
             );
+
+            $("#product_part_number_"+ this.productCount).change(function() {
+                var selectedValue = $(this).val();
+                $(this).prev().val($(this).find("option[value='"+ selectedValue +"']").text().replace('"', '&quot;'));
+            });
 
             this.productCount++;
         },

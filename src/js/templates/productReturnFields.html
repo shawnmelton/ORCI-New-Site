@@ -1,9 +1,12 @@
 <table>
     <tr>
         <td>
-            <select name="product_item_<%= cnt %>">
+            <input type="hidden" name="product_item_<%= cnt %>">
+            <select name="product_part_number_<%= cnt %>" id="product_part_number_<%= cnt %>">
                 <option value="">-</option>
-                <option value="test">This</option>
+                <% _.each(items, function(item) { %>
+                <option value="<%= item.product_part_number %>"><%= item.product_part_name %></option>
+                <% }); %>
             </select>
         </td>
         <td><input type="text" name="product_serial_number_<%= cnt %>"></td>

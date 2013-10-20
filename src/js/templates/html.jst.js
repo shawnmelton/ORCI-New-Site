@@ -127,11 +127,24 @@ return __p
 
 this["JST"]["src/js/templates/productReturnFields.html"] = function(obj) {
 obj || (obj = {});
-var __t, __p = '', __e = _.escape;
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
 with (obj) {
-__p += '<table>\n    <tr>\n        <td>\n            <select name="product_item_' +
+__p += '<table>\n    <tr>\n        <td>\n            <input type="hidden" name="product_item_' +
 ((__t = ( cnt )) == null ? '' : __t) +
-'">\n                <option value="">-</option>\n                <option value="test">This</option>\n            </select>\n        </td>\n        <td><input type="text" name="product_serial_number_' +
+'">\n            <select name="product_part_number_' +
+((__t = ( cnt )) == null ? '' : __t) +
+'" id="product_part_number_' +
+((__t = ( cnt )) == null ? '' : __t) +
+'">\n                <option value="">-</option>\n                ';
+ _.each(items, function(item) { ;
+__p += '\n                <option value="' +
+((__t = ( item.product_part_number )) == null ? '' : __t) +
+'">' +
+((__t = ( item.product_part_name )) == null ? '' : __t) +
+'</option>\n                ';
+ }); ;
+__p += '\n            </select>\n        </td>\n        <td><input type="text" name="product_serial_number_' +
 ((__t = ( cnt )) == null ? '' : __t) +
 '"></td>\n        <td><input type="text" name="product_quantity_' +
 ((__t = ( cnt )) == null ? '' : __t) +
