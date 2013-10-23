@@ -161,7 +161,6 @@ class RMARequestForm {
      * Store the contact name, ip address and date of when the user submitted (and accepted terms) for the RMA Request.
      */
     private function storeSubmission() {
-        $db = new mysqli('localhost', 'orcicorpuser', '0rC1P*sS!#', 'orcicorp');
         $stmt = $db->prepare('
             INSERT INTO rma_request_submissions SET 
                 submission_ip_address = (?),

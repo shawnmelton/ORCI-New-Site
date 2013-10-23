@@ -10,7 +10,6 @@
  */
 if(isset($_GET['type']) &&  $_GET['type'] == 'rma-product-items') {
     header('Content-Type: text/plain');
-    $db = new mysqli('localhost', 'orcicorpuser', '0rC1P*sS!#', 'orcicorp');
 
     $options = array();
     if($results = $db->query('SELECT * FROM rma_request_products ORDER BY product_part_name ASC')) {
