@@ -117,10 +117,8 @@ class RMARequestForm {
         }
 
         $this->storeSubmission();
-        $this->sendEmail('shawn.a.melton@gmail.com');
-        //$this->sendEmail('colleen.bond@openroadsconsulting.com,skret@openroadsconsulting.com');
+        $this->sendEmail('shawn.a.melton@gmail.com,colleen.bond@openroadsconsulting.com,skret@openroadsconsulting.com');
         $this->sendCustomerEmail();
-        // $this->sendEmail('shawn.melton@openroadsconsulting.com,christopher.sells@openroadsconsulting.com,carrie.asbill@openroadsconsulting.com,kevin.bray@openroadsconsulting.com,joseph.keith@openroadsconsulting.com,mark.thomas@openroadsconsulting.com');
     }
 
     private function sendCustomerEmail() {
@@ -163,7 +161,7 @@ class RMARequestForm {
      * Store the contact name, ip address and date of when the user submitted (and accepted terms) for the RMA Request.
      */
     private function storeSubmission() {
-        $db = new mysqli('127.0.0.1', 'orcicorpuser', '0rC1P*sS!#', 'orcicorp');
+        $db = new mysqli('localhost', 'orcicorpuser', '0rC1P*sS!#', 'orcicorp');
         $stmt = $db->prepare('
             INSERT INTO rma_request_submissions SET 
                 submission_ip_address = (?),
