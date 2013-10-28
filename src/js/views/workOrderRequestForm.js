@@ -224,7 +224,7 @@ define(['jquery', 'backbone', 'underscore', 'templates/html.jst', 'views/rmaConf
             var _this = this;
             this.form.find("label.req").each(function() {
                 var field = $(this).next();
-                if(field.val() === "" || (field.attr("id") === "email" && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(field.val())) || (field.attr("id") === "zip-code" && !/^\d{5}(?:[-\s]\d{4})?$/i.test(field.val()))) {
+                if(field.val() === "" || (field.attr("id") === "email" && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(field.val()))) {
                     _this.showFieldError(field);
                     noErrors = false;
                 }
