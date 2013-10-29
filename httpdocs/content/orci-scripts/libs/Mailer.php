@@ -130,7 +130,7 @@ class Mailer {
 		}
 
 		if(strlen($this->bcc) > 0) {
-			$headersArr[] = 'Bcc: '. $this->bccomp(De, right_operand);
+			$headersArr[] = 'Bcc: '. $this->bcc;
 		}
 		
 		$headersArr[] = 'Date: '. date('r');
